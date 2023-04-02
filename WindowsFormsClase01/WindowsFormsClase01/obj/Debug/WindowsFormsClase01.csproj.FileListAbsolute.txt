@@ -1,0 +1,10 @@
+C:\Users\laury\source\repos\WindowsFormsClase01\WindowsFormsClase01\bin\Debug\WindowsFormsClase01.exe.config
+C:\Users\laury\source\repos\WindowsFormsClase01\WindowsFormsClase01\bin\Debug\WindowsFormsClase01.exe
+C:\Users\laury\source\repos\WindowsFormsClase01\WindowsFormsClase01\bin\Debug\WindowsFormsClase01.pdb
+C:\Users\laury\source\repos\WindowsFormsClase01\WindowsFormsClase01\obj\Debug\WindowsFormsClase01.csproj.AssemblyReference.cache
+C:\Users\laury\source\repos\WindowsFormsClase01\WindowsFormsClase01\obj\Debug\WindowsFormsClase01.csproj.SuggestedBindingRedirects.cache
+C:\Users\laury\source\repos\WindowsFormsClase01\WindowsFormsClase01\obj\Debug\WindowsFormsClase01.Properties.Resources.resources
+C:\Users\laury\source\repos\WindowsFormsClase01\WindowsFormsClase01\obj\Debug\WindowsFormsClase01.csproj.GenerateResource.cache
+C:\Users\laury\source\repos\WindowsFormsClase01\WindowsFormsClase01\obj\Debug\WindowsFormsClase01.csproj.CoreCompileInputs.cache
+C:\Users\laury\source\repos\WindowsFormsClase01\WindowsFormsClase01\obj\Debug\WindowsFormsClase01.exe
+C:\Users\laury\source\repos\WindowsFormsClase01\WindowsFormsClase01\obj\Debug\WindowsFormsClase01.pdb
