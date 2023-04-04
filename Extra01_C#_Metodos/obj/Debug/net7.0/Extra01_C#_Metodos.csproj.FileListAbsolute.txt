@@ -1,0 +1,15 @@
+C:\Users\laury\Downloads\Portafolio de trabajo Michael Alvarez H\05 .NET\Extra01_C#_Metodos\bin\Debug\net7.0\Extra01_C#_Metodos.exe
+C:\Users\laury\Downloads\Portafolio de trabajo Michael Alvarez H\05 .NET\Extra01_C#_Metodos\bin\Debug\net7.0\Extra01_C#_Metodos.deps.json
+C:\Users\laury\Downloads\Portafolio de trabajo Michael Alvarez H\05 .NET\Extra01_C#_Metodos\bin\Debug\net7.0\Extra01_C#_Metodos.runtimeconfig.json
+C:\Users\laury\Downloads\Portafolio de trabajo Michael Alvarez H\05 .NET\Extra01_C#_Metodos\bin\Debug\net7.0\Extra01_C#_Metodos.dll
+C:\Users\laury\Downloads\Portafolio de trabajo Michael Alvarez H\05 .NET\Extra01_C#_Metodos\bin\Debug\net7.0\Extra01_C#_Metodos.pdb
+C:\Users\laury\Downloads\Portafolio de trabajo Michael Alvarez H\05 .NET\Extra01_C#_Metodos\obj\Debug\net7.0\Extra01_C#_Metodos.csproj.AssemblyReference.cache
+C:\Users\laury\Downloads\Portafolio de trabajo Michael Alvarez H\05 .NET\Extra01_C#_Metodos\obj\Debug\net7.0\Extra01_C#_Metodos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\laury\Downloads\Portafolio de trabajo Michael Alvarez H\05 .NET\Extra01_C#_Metodos\obj\Debug\net7.0\Extra01_C#_Metodos.AssemblyInfoInputs.cache
+C:\Users\laury\Downloads\Portafolio de trabajo Michael Alvarez H\05 .NET\Extra01_C#_Metodos\obj\Debug\net7.0\Extra01_C#_Metodos.AssemblyInfo.cs
+C:\Users\laury\Downloads\Portafolio de trabajo Michael Alvarez H\05 .NET\Extra01_C#_Metodos\obj\Debug\net7.0\Extra01_C#_Metodos.csproj.CoreCompileInputs.cache
+C:\Users\laury\Downloads\Portafolio de trabajo Michael Alvarez H\05 .NET\Extra01_C#_Metodos\obj\Debug\net7.0\Extra01_C#_Metodos.dll
+C:\Users\laury\Downloads\Portafolio de trabajo Michael Alvarez H\05 .NET\Extra01_C#_Metodos\obj\Debug\net7.0\refint\Extra01_C#_Metodos.dll
+C:\Users\laury\Downloads\Portafolio de trabajo Michael Alvarez H\05 .NET\Extra01_C#_Metodos\obj\Debug\net7.0\Extra01_C#_Metodos.pdb
+C:\Users\laury\Downloads\Portafolio de trabajo Michael Alvarez H\05 .NET\Extra01_C#_Metodos\obj\Debug\net7.0\Extra01_C#_Metodos.genruntimeconfig.cache
+C:\Users\laury\Downloads\Portafolio de trabajo Michael Alvarez H\05 .NET\Extra01_C#_Metodos\obj\Debug\net7.0\ref\Extra01_C#_Metodos.dll
