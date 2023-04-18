@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dbProyectoINAModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tbClientes">
+    <Key>
+      <PropertyRef Name="cedula" />
+    </Key>
+    <Property Name="cedula" Type="nchar" MaxLength="12" Nullable="false" />
+    <Property Name="tipoCliente" Type="int" Nullable="false" />
+    <Property Name="descMax" Type="int" Nullable="false" />
+    <Property Name="foto" Type="image" />
+  </EntityType>
+  <EntityType Name="tbPersona">
+    <Key>
+      <PropertyRef Name="cedula" />
+    </Key>
+    <Property Name="cedula" Type="nchar" MaxLength="12" Nullable="false" />
+    <Property Name="nombre" Type="nchar" MaxLength="50" Nullable="false" />
+    <Property Name="apellido1" Type="nchar" MaxLength="50" Nullable="false" />
+    <Property Name="apellido2" Type="nchar" MaxLength="50" Nullable="false" />
+    <Property Name="genero" Type="int" Nullable="false" />
+    <Property Name="fechaNac" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbTipoClientes">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="nombre" Type="nchar" MaxLength="50" Nullable="false" />
+    <Property Name="estado" Type="bit" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_tbClientes_tbPersona1">
+    <End Role="tbPersona" Type="Self.tbPersona" Multiplicity="1" />
+    <End Role="tbClientes" Type="Self.tbClientes" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="tbPersona">
+        <PropertyRef Name="cedula" />
+      </Principal>
+      <Dependent Role="tbClientes">
+        <PropertyRef Name="cedula" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbClientes_tbTipoClientes">
+    <End Role="tbTipoClientes" Type="Self.tbTipoClientes" Multiplicity="1" />
+    <End Role="tbClientes" Type="Self.tbClientes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbTipoClientes">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tbClientes">
+        <PropertyRef Name="tipoCliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="dbProyectoINAModelStoreContainer">
+    <EntitySet Name="tbClientes" EntityType="Self.tbClientes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbPersona" EntityType="Self.tbPersona" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbTipoClientes" EntityType="Self.tbTipoClientes" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_tbClientes_tbPersona1" Association="Self.FK_tbClientes_tbPersona1">
+      <End Role="tbPersona" EntitySet="tbPersona" />
+      <End Role="tbClientes" EntitySet="tbClientes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbClientes_tbTipoClientes" Association="Self.FK_tbClientes_tbTipoClientes">
+      <End Role="tbTipoClientes" EntitySet="tbTipoClientes" />
+      <End Role="tbClientes" EntitySet="tbClientes" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
