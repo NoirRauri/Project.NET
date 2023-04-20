@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Utilities.Exceptions
 {
-    internal class EntityExistsDBException : Exception
+    public class EntityExistsDBException : Exception
     {
         public EntityExistsDBException(string nombreEntidad) : 
             base(string.Format("Ya existe {0} en la base de datos",nombreEntidad))

@@ -1,6 +1,7 @@
 ﻿using BL;
 using Entities;
 using System;
+using Utilities.Exceptions;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,9 +16,13 @@ namespace ProjectINAForms
 {
     public partial class frmClientes : Form
     {
+        public tbClientes cliente { get; set; }
         // instacia para ir a la capa BL 
         TipoClientesBL tipoClientesIns=new TipoClientesBL();
         ClientesBL clienteIns=new ClientesBL();
+
+        private bool isCreate;
+
         public frmClientes()
         {
             InitializeComponent();
@@ -31,6 +36,16 @@ namespace ProjectINAForms
         private void frmClientes_Load(object sender, EventArgs e)
         {
             cargarCambos();
+            isCreate = cliente == null ? true : false;
+
+            if (isCreate)
+            {
+                lblTitulo.Text = "Crear Cliente";
+            }
+            else
+            {
+                lblTitulo.Text = "Modificar Cliente";
+            }
         }
 
         private void cargarCambos()
@@ -46,11 +61,14 @@ namespace ProjectINAForms
         {
             try
             {
-                guardar();
+                if (guardar()) 
+                {
+                    MessageBox.Show("El cliente  se guardo  correctamente.");
+                }
             }
-            catch (EntityExistsDBException )
+            catch (EntityExistsDBException ex)
             {
-                MessageBox.Show("Error al guardar formato");
+                MessageBox.Show(ex.Message);
             }
             catch (Exception ex)
             {

@@ -45,6 +45,7 @@
             this.colNombre,
             this.colApellido1,
             this.colApellido2});
+            this.lstvListaClientes.FullRowSelect = true;
             this.lstvListaClientes.GridLines = true;
             this.lstvListaClientes.HideSelection = false;
             this.lstvListaClientes.Location = new System.Drawing.Point(11, 83);
@@ -53,6 +54,7 @@
             this.lstvListaClientes.TabIndex = 0;
             this.lstvListaClientes.UseCompatibleStateImageBehavior = false;
             this.lstvListaClientes.View = System.Windows.Forms.View.Details;
+            this.lstvListaClientes.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lstvListaClientes_MouseDoubleClick);
             // 
             // colCedula
             // 

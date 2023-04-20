@@ -125,7 +125,7 @@
       <Name>Entities</Name>
     </ProjectReference>
     <ProjectReference Include="..\Utilities\Utilities.csproj">
-      <Project>{fea9f0be-3bbb-42c2-8f6d-074b52b8ab84}</Project>
+      <Project>{3a812bce-cd21-4286-9b08-07f8760f5db7}</Project>
       <Name>Utilities</Name>
     </ProjectReference>
   </ItemGroup>

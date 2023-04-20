@@ -1,9 +1,3 @@
-C:\Users\INA\source\repos\ProjectINA\Utilities\bin\Debug\Utilities.dll
-C:\Users\INA\source\repos\ProjectINA\Utilities\bin\Debug\Utilities.pdb
-C:\Users\INA\source\repos\ProjectINA\Utilities\obj\Debug\Utilities.csprojAssemblyReference.cache
-C:\Users\INA\source\repos\ProjectINA\Utilities\obj\Debug\Utilities.csproj.CoreCompileInputs.cache
-C:\Users\INA\source\repos\ProjectINA\Utilities\obj\Debug\Utilities.dll
-C:\Users\INA\source\repos\ProjectINA\Utilities\obj\Debug\Utilities.pdb
 C:\Users\laury\Downloads\Portafolio de trabajo Michael Alvarez H\05 .NET\01 Sincronico\04-12-2023\ProjectINA\Utilities\bin\Debug\Utilities.dll
 C:\Users\laury\Downloads\Portafolio de trabajo Michael Alvarez H\05 .NET\01 Sincronico\04-12-2023\ProjectINA\Utilities\bin\Debug\Utilities.pdb
 C:\Users\laury\Downloads\Portafolio de trabajo Michael Alvarez H\05 .NET\01 Sincronico\04-12-2023\ProjectINA\Utilities\obj\Debug\Utilities.csproj.AssemblyReference.cache
