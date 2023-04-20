@@ -22,3 +22,30 @@ C:\Users\INA\source\repos\ProjectINA\ProjectINAForms\obj\Debug\ProjectINAForms.e
 C:\Users\INA\source\repos\ProjectINA\ProjectINAForms\obj\Debug\ProjectINAForms.pdb
 C:\Users\INA\source\repos\ProjectINA\ProjectINAForms\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\INA\source\repos\ProjectINA\ProjectINAForms\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\laury\Downloads\Portafolio de trabajo Michael Alvarez H\05 .NET\01 Sincronico\04-12-2023\ProjectINA\ProjectINAForms\bin\Debug\ProjectINAForms.exe.config
+C:\Users\laury\Downloads\Portafolio de trabajo Michael Alvarez H\05 .NET\01 Sincronico\04-12-2023\ProjectINA\ProjectINAForms\bin\Debug\ProjectINAForms.exe
+C:\Users\laury\Downloads\Portafolio de trabajo Michael Alvarez H\05 .NET\01 Sincronico\04-12-2023\ProjectINA\ProjectINAForms\bin\Debug\ProjectINAForms.pdb
+C:\Users\laury\Downloads\Portafolio de trabajo Michael Alvarez H\05 .NET\01 Sincronico\04-12-2023\ProjectINA\ProjectINAForms\bin\Debug\BL.dll
+C:\Users\laury\Downloads\Portafolio de trabajo Michael Alvarez H\05 .NET\01 Sincronico\04-12-2023\ProjectINA\ProjectINAForms\bin\Debug\Entities.dll
+C:\Users\laury\Downloads\Portafolio de trabajo Michael Alvarez H\05 .NET\01 Sincronico\04-12-2023\ProjectINA\ProjectINAForms\bin\Debug\EntityFramework.dll
+C:\Users\laury\Downloads\Portafolio de trabajo Michael Alvarez H\05 .NET\01 Sincronico\04-12-2023\ProjectINA\ProjectINAForms\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\laury\Downloads\Portafolio de trabajo Michael Alvarez H\05 .NET\01 Sincronico\04-12-2023\ProjectINA\ProjectINAForms\bin\Debug\Utilities.dll
+C:\Users\laury\Downloads\Portafolio de trabajo Michael Alvarez H\05 .NET\01 Sincronico\04-12-2023\ProjectINA\ProjectINAForms\bin\Debug\DL.dll
+C:\Users\laury\Downloads\Portafolio de trabajo Michael Alvarez H\05 .NET\01 Sincronico\04-12-2023\ProjectINA\ProjectINAForms\bin\Debug\BL.pdb
+C:\Users\laury\Downloads\Portafolio de trabajo Michael Alvarez H\05 .NET\01 Sincronico\04-12-2023\ProjectINA\ProjectINAForms\bin\Debug\Entities.pdb
+C:\Users\laury\Downloads\Portafolio de trabajo Michael Alvarez H\05 .NET\01 Sincronico\04-12-2023\ProjectINA\ProjectINAForms\bin\Debug\Utilities.pdb
+C:\Users\laury\Downloads\Portafolio de trabajo Michael Alvarez H\05 .NET\01 Sincronico\04-12-2023\ProjectINA\ProjectINAForms\bin\Debug\EntityFramework.xml
+C:\Users\laury\Downloads\Portafolio de trabajo Michael Alvarez H\05 .NET\01 Sincronico\04-12-2023\ProjectINA\ProjectINAForms\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\laury\Downloads\Portafolio de trabajo Michael Alvarez H\05 .NET\01 Sincronico\04-12-2023\ProjectINA\ProjectINAForms\bin\Debug\DL.pdb
+C:\Users\laury\Downloads\Portafolio de trabajo Michael Alvarez H\05 .NET\01 Sincronico\04-12-2023\ProjectINA\ProjectINAForms\bin\Debug\DL.dll.config
+C:\Users\laury\Downloads\Portafolio de trabajo Michael Alvarez H\05 .NET\01 Sincronico\04-12-2023\ProjectINA\ProjectINAForms\obj\Debug\ProjectINAForms.csproj.AssemblyReference.cache
+C:\Users\laury\Downloads\Portafolio de trabajo Michael Alvarez H\05 .NET\01 Sincronico\04-12-2023\ProjectINA\ProjectINAForms\obj\Debug\ProjectINAForms.csproj.SuggestedBindingRedirects.cache
+C:\Users\laury\Downloads\Portafolio de trabajo Michael Alvarez H\05 .NET\01 Sincronico\04-12-2023\ProjectINA\ProjectINAForms\obj\Debug\ProjectINAForms.frmListaClientes.resources
+C:\Users\laury\Downloads\Portafolio de trabajo Michael Alvarez H\05 .NET\01 Sincronico\04-12-2023\ProjectINA\ProjectINAForms\obj\Debug\ProjectINAForms.Properties.Resources.resources
+C:\Users\laury\Downloads\Portafolio de trabajo Michael Alvarez H\05 .NET\01 Sincronico\04-12-2023\ProjectINA\ProjectINAForms\obj\Debug\ProjectINAForms.csproj.GenerateResource.cache
+C:\Users\laury\Downloads\Portafolio de trabajo Michael Alvarez H\05 .NET\01 Sincronico\04-12-2023\ProjectINA\ProjectINAForms\obj\Debug\ProjectINAForms.csproj.CoreCompileInputs.cache
+C:\Users\laury\Downloads\Portafolio de trabajo Michael Alvarez H\05 .NET\01 Sincronico\04-12-2023\ProjectINA\ProjectINAForms\obj\Debug\ProjectINAForms.csproj.CopyComplete
+C:\Users\laury\Downloads\Portafolio de trabajo Michael Alvarez H\05 .NET\01 Sincronico\04-12-2023\ProjectINA\ProjectINAForms\obj\Debug\ProjectINAForms.exe
+C:\Users\laury\Downloads\Portafolio de trabajo Michael Alvarez H\05 .NET\01 Sincronico\04-12-2023\ProjectINA\ProjectINAForms\obj\Debug\ProjectINAForms.pdb
+C:\Users\laury\Downloads\Portafolio de trabajo Michael Alvarez H\05 .NET\01 Sincronico\04-12-2023\ProjectINA\ProjectINAForms\obj\Debug\ProjectINAForms.frmPrincipal.resources
+C:\Users\laury\Downloads\Portafolio de trabajo Michael Alvarez H\05 .NET\01 Sincronico\04-12-2023\ProjectINA\ProjectINAForms\obj\Debug\ProjectINAForms.frmClientes.resources

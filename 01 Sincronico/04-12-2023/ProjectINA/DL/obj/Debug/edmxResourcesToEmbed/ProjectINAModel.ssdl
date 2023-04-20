@@ -20,6 +20,14 @@
     <Property Name="genero" Type="int" Nullable="false" />
     <Property Name="fechaNac" Type="datetime" Nullable="false" />
   </EntityType>
+  <EntityType Name="tbRoles">
+    <Key>
+      <PropertyRef Name="rol" />
+    </Key>
+    <Property Name="rol" Type="nchar" MaxLength="12" Nullable="false" />
+    <Property Name="nombreRol" Type="nchar" MaxLength="50" Nullable="false" />
+    <Property Name="estado" Type="bit" Nullable="false" />
+  </EntityType>
   <EntityType Name="tbTipoClientes">
     <Key>
       <PropertyRef Name="id" />
@@ -28,7 +36,18 @@
     <Property Name="nombre" Type="nchar" MaxLength="50" Nullable="false" />
     <Property Name="estado" Type="bit" Nullable="false" />
   </EntityType>
-  <Association Name="FK_tbClientes_tbPersona1">
+  <EntityType Name="tbUsuarios">
+    <Key>
+      <PropertyRef Name="cedula" />
+    </Key>
+    <Property Name="cedula" Type="nchar" MaxLength="12" Nullable="false" />
+    <Property Name="nombre" Type="nchar" MaxLength="50" Nullable="false" />
+    <Property Name="fechaIngreso" Type="date" Nullable="false" />
+    <Property Name="password" Type="nchar" MaxLength="50" Nullable="false" />
+    <Property Name="rol" Type="nchar" MaxLength="12" Nullable="false" />
+    <Property Name="estado" Type="bit" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_tbClientes_tbPersona">
     <End Role="tbPersona" Type="Self.tbPersona" Multiplicity="1" />
     <End Role="tbClientes" Type="Self.tbClientes" Multiplicity="0..1" />
     <ReferentialConstraint>
@@ -52,17 +71,51 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_tbUsuarios_tbPersona">
+    <End Role="tbPersona" Type="Self.tbPersona" Multiplicity="1" />
+    <End Role="tbUsuarios" Type="Self.tbUsuarios" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="tbPersona">
+        <PropertyRef Name="cedula" />
+      </Principal>
+      <Dependent Role="tbUsuarios">
+        <PropertyRef Name="cedula" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbUsuarios_tbRoles1">
+    <End Role="tbRoles" Type="Self.tbRoles" Multiplicity="1" />
+    <End Role="tbUsuarios" Type="Self.tbUsuarios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbRoles">
+        <PropertyRef Name="rol" />
+      </Principal>
+      <Dependent Role="tbUsuarios">
+        <PropertyRef Name="rol" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <EntityContainer Name="dbProyectoINAModelStoreContainer">
     <EntitySet Name="tbClientes" EntityType="Self.tbClientes" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tbPersona" EntityType="Self.tbPersona" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbRoles" EntityType="Self.tbRoles" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tbTipoClientes" EntityType="Self.tbTipoClientes" Schema="dbo" store:Type="Tables" />
-    <AssociationSet Name="FK_tbClientes_tbPersona1" Association="Self.FK_tbClientes_tbPersona1">
+    <EntitySet Name="tbUsuarios" EntityType="Self.tbUsuarios" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_tbClientes_tbPersona" Association="Self.FK_tbClientes_tbPersona">
       <End Role="tbPersona" EntitySet="tbPersona" />
       <End Role="tbClientes" EntitySet="tbClientes" />
     </AssociationSet>
     <AssociationSet Name="FK_tbClientes_tbTipoClientes" Association="Self.FK_tbClientes_tbTipoClientes">
       <End Role="tbTipoClientes" EntitySet="tbTipoClientes" />
       <End Role="tbClientes" EntitySet="tbClientes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbUsuarios_tbPersona" Association="Self.FK_tbUsuarios_tbPersona">
+      <End Role="tbPersona" EntitySet="tbPersona" />
+      <End Role="tbUsuarios" EntitySet="tbUsuarios" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbUsuarios_tbRoles1" Association="Self.FK_tbUsuarios_tbRoles1">
+      <End Role="tbRoles" EntitySet="tbRoles" />
+      <End Role="tbUsuarios" EntitySet="tbUsuarios" />
     </AssociationSet>
   </EntityContainer>
 </Schema>

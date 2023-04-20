@@ -60,7 +60,13 @@
     <Compile Include="tbPersona.cs">
       <DependentUpon>ProjectINAModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="tbRoles.cs">
+      <DependentUpon>ProjectINAModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="tbTipoClientes.cs">
+      <DependentUpon>ProjectINAModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbUsuarios.cs">
       <DependentUpon>ProjectINAModel.tt</DependentUpon>
     </Compile>
   </ItemGroup>

@@ -20,7 +20,18 @@ namespace BL
 
         public tbClientes guardar(tbClientes entity)
         {
-            throw new NotImplementedException();
+            //reglas de negocio
+
+            //validar si existe el cliente
+            var cliente = obtenerPorId(entity);
+            if (cliente != null)
+            {
+                // error
+                throw new EntityExistsDBException("Clientes");
+            }
+
+            // guardar DL
+            return clientesIns.guardar(entity);
         }
 
         public bool modificar(tbClientes entity)
@@ -30,7 +41,7 @@ namespace BL
 
         public tbClientes obtenerPorId(tbClientes entity)
         {
-            throw new NotImplementedException();
+            return clientesIns.obtenerPorId(entity);
         }
 
         public List<tbClientes> obtenerTodos()

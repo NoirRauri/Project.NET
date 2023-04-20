@@ -23,12 +23,33 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="tbRoles">
+      <EntityTypeMapping TypeName="dbProyectoINAModel.tbRoles">
+        <MappingFragment StoreEntitySet="tbRoles">
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="nombreRol" ColumnName="nombreRol" />
+          <ScalarProperty Name="rol" ColumnName="rol" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="tbTipoClientes">
       <EntityTypeMapping TypeName="dbProyectoINAModel.tbTipoClientes">
         <MappingFragment StoreEntitySet="tbTipoClientes">
           <ScalarProperty Name="estado" ColumnName="estado" />
           <ScalarProperty Name="nombre" ColumnName="nombre" />
           <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbUsuarios">
+      <EntityTypeMapping TypeName="dbProyectoINAModel.tbUsuarios">
+        <MappingFragment StoreEntitySet="tbUsuarios">
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="rol" ColumnName="rol" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="fechaIngreso" ColumnName="fechaIngreso" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="cedula" ColumnName="cedula" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

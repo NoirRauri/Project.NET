@@ -28,15 +28,15 @@ namespace ProjectINAForms
 
         private void cargarLista(List<tbClientes> lista)
         {
-            foreach (var cliente in lista)
+            foreach (var clientes in lista)
             {
-                ListViewItem item = new ListViewItem(); 
-                item.Text = cliente.cedula;
-                item.SubItems.Add(cliente.tbPersona.nombre.Trim().ToLower());
-                item.SubItems.Add(cliente.tbPersona.apellido1.Trim().ToLower());
-                item.SubItems.Add(cliente.tbPersona.apellido2.Trim().ToLower());
+                ListViewItem item = new ListViewItem();
+                item.Text= clientes.cedula;
+                item.SubItems.Add(clientes.tbPersona.nombre.Trim().ToUpper());
+                item.SubItems.Add(clientes.tbPersona.apellido1.Trim().ToUpper());
+                item.SubItems.Add(clientes.tbPersona.apellido2.Trim().ToUpper());
 
-                lstvListaClientes.Items.Add(item);
+                lstvListaClientes.Items.Add(item);  
             }
         }
 
@@ -44,6 +44,12 @@ namespace ProjectINAForms
         {
             
           
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            frmClientes frmClientes = new frmClientes();
+            frmClientes.ShowDialog();
         }
     }
 }

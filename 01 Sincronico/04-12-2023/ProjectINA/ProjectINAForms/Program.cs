@@ -16,7 +16,7 @@ namespace ProjectINAForms
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmListaClientes());
+            Application.Run(new frmPrincipal());
         }
     }
 }

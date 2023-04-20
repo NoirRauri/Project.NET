@@ -94,11 +94,12 @@
             // btnAgregar
             // 
             this.btnAgregar.Image = global::ProjectINAForms.Properties.Resources.add_user;
-            this.btnAgregar.Location = new System.Drawing.Point(715, 38);
+            this.btnAgregar.Location = new System.Drawing.Point(730, 38);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(46, 36);
+            this.btnAgregar.Size = new System.Drawing.Size(40, 39);
             this.btnAgregar.TabIndex = 3;
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // frmListaClientes
             // 

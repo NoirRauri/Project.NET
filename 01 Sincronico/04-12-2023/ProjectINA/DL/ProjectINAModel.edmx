@@ -25,6 +25,14 @@
           <Property Name="genero" Type="int" Nullable="false" />
           <Property Name="fechaNac" Type="datetime" Nullable="false" />
         </EntityType>
+        <EntityType Name="tbRoles">
+          <Key>
+            <PropertyRef Name="rol" />
+          </Key>
+          <Property Name="rol" Type="nchar" MaxLength="12" Nullable="false" />
+          <Property Name="nombreRol" Type="nchar" MaxLength="50" Nullable="false" />
+          <Property Name="estado" Type="bit" Nullable="false" />
+        </EntityType>
         <EntityType Name="tbTipoClientes">
           <Key>
             <PropertyRef Name="id" />
@@ -33,7 +41,18 @@
           <Property Name="nombre" Type="nchar" MaxLength="50" Nullable="false" />
           <Property Name="estado" Type="bit" Nullable="false" />
         </EntityType>
-        <Association Name="FK_tbClientes_tbPersona1">
+        <EntityType Name="tbUsuarios">
+          <Key>
+            <PropertyRef Name="cedula" />
+          </Key>
+          <Property Name="cedula" Type="nchar" MaxLength="12" Nullable="false" />
+          <Property Name="nombre" Type="nchar" MaxLength="50" Nullable="false" />
+          <Property Name="fechaIngreso" Type="date" Nullable="false" />
+          <Property Name="password" Type="nchar" MaxLength="50" Nullable="false" />
+          <Property Name="rol" Type="nchar" MaxLength="12" Nullable="false" />
+          <Property Name="estado" Type="bit" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_tbClientes_tbPersona">
           <End Role="tbPersona" Type="Self.tbPersona" Multiplicity="1" />
           <End Role="tbClientes" Type="Self.tbClientes" Multiplicity="0..1" />
           <ReferentialConstraint>
@@ -57,17 +76,51 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_tbUsuarios_tbPersona">
+          <End Role="tbPersona" Type="Self.tbPersona" Multiplicity="1" />
+          <End Role="tbUsuarios" Type="Self.tbUsuarios" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="tbPersona">
+              <PropertyRef Name="cedula" />
+            </Principal>
+            <Dependent Role="tbUsuarios">
+              <PropertyRef Name="cedula" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbUsuarios_tbRoles1">
+          <End Role="tbRoles" Type="Self.tbRoles" Multiplicity="1" />
+          <End Role="tbUsuarios" Type="Self.tbUsuarios" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbRoles">
+              <PropertyRef Name="rol" />
+            </Principal>
+            <Dependent Role="tbUsuarios">
+              <PropertyRef Name="rol" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="dbProyectoINAModelStoreContainer">
           <EntitySet Name="tbClientes" EntityType="Self.tbClientes" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbPersona" EntityType="Self.tbPersona" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbRoles" EntityType="Self.tbRoles" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbTipoClientes" EntityType="Self.tbTipoClientes" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK_tbClientes_tbPersona1" Association="Self.FK_tbClientes_tbPersona1">
+          <EntitySet Name="tbUsuarios" EntityType="Self.tbUsuarios" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_tbClientes_tbPersona" Association="Self.FK_tbClientes_tbPersona">
             <End Role="tbPersona" EntitySet="tbPersona" />
             <End Role="tbClientes" EntitySet="tbClientes" />
           </AssociationSet>
           <AssociationSet Name="FK_tbClientes_tbTipoClientes" Association="Self.FK_tbClientes_tbTipoClientes">
             <End Role="tbTipoClientes" EntitySet="tbTipoClientes" />
             <End Role="tbClientes" EntitySet="tbClientes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbUsuarios_tbPersona" Association="Self.FK_tbUsuarios_tbPersona">
+            <End Role="tbPersona" EntitySet="tbPersona" />
+            <End Role="tbUsuarios" EntitySet="tbUsuarios" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbUsuarios_tbRoles1" Association="Self.FK_tbUsuarios_tbRoles1">
+            <End Role="tbRoles" EntitySet="tbRoles" />
+            <End Role="tbUsuarios" EntitySet="tbUsuarios" />
           </AssociationSet>
         </EntityContainer>
       </Schema></edmx:StorageModels>
@@ -77,14 +130,24 @@
         <EntityContainer Name="dbProyectoINAEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="tbClientes" EntityType="dbProyectoINAModel.tbClientes" />
           <EntitySet Name="tbPersona" EntityType="dbProyectoINAModel.tbPersona" />
+          <EntitySet Name="tbRoles" EntityType="dbProyectoINAModel.tbRoles" />
           <EntitySet Name="tbTipoClientes" EntityType="dbProyectoINAModel.tbTipoClientes" />
-          <AssociationSet Name="FK_tbClientes_tbPersona1" Association="dbProyectoINAModel.FK_tbClientes_tbPersona1">
+          <EntitySet Name="tbUsuarios" EntityType="dbProyectoINAModel.tbUsuarios" />
+          <AssociationSet Name="FK_tbClientes_tbPersona" Association="dbProyectoINAModel.FK_tbClientes_tbPersona">
             <End Role="tbPersona" EntitySet="tbPersona" />
             <End Role="tbClientes" EntitySet="tbClientes" />
           </AssociationSet>
           <AssociationSet Name="FK_tbClientes_tbTipoClientes" Association="dbProyectoINAModel.FK_tbClientes_tbTipoClientes">
             <End Role="tbTipoClientes" EntitySet="tbTipoClientes" />
             <End Role="tbClientes" EntitySet="tbClientes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbUsuarios_tbPersona" Association="dbProyectoINAModel.FK_tbUsuarios_tbPersona">
+            <End Role="tbPersona" EntitySet="tbPersona" />
+            <End Role="tbUsuarios" EntitySet="tbUsuarios" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbUsuarios_tbRoles1" Association="dbProyectoINAModel.FK_tbUsuarios_tbRoles1">
+            <End Role="tbRoles" EntitySet="tbRoles" />
+            <End Role="tbUsuarios" EntitySet="tbUsuarios" />
           </AssociationSet>
         </EntityContainer>
         <EntityType Name="tbClientes">
@@ -95,7 +158,7 @@
           <Property Name="tipoCliente" Type="Int32" Nullable="false" />
           <Property Name="descMax" Type="Int32" Nullable="false" />
           <Property Name="foto" Type="Binary" MaxLength="Max" FixedLength="false" />
-          <NavigationProperty Name="tbPersona" Relationship="dbProyectoINAModel.FK_tbClientes_tbPersona1" FromRole="tbClientes" ToRole="tbPersona" />
+          <NavigationProperty Name="tbPersona" Relationship="dbProyectoINAModel.FK_tbClientes_tbPersona" FromRole="tbClientes" ToRole="tbPersona" />
           <NavigationProperty Name="tbTipoClientes" Relationship="dbProyectoINAModel.FK_tbClientes_tbTipoClientes" FromRole="tbClientes" ToRole="tbTipoClientes" />
         </EntityType>
         <EntityType Name="tbPersona">
@@ -108,7 +171,17 @@
           <Property Name="apellido2" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="true" />
           <Property Name="genero" Type="Int32" Nullable="false" />
           <Property Name="fechaNac" Type="DateTime" Nullable="false" Precision="3" />
-          <NavigationProperty Name="tbClientes" Relationship="dbProyectoINAModel.FK_tbClientes_tbPersona1" FromRole="tbPersona" ToRole="tbClientes" />
+          <NavigationProperty Name="tbClientes" Relationship="dbProyectoINAModel.FK_tbClientes_tbPersona" FromRole="tbPersona" ToRole="tbClientes" />
+          <NavigationProperty Name="tbUsuarios" Relationship="dbProyectoINAModel.FK_tbUsuarios_tbPersona" FromRole="tbPersona" ToRole="tbUsuarios" />
+        </EntityType>
+        <EntityType Name="tbRoles">
+          <Key>
+            <PropertyRef Name="rol" />
+          </Key>
+          <Property Name="rol" Type="String" Nullable="false" MaxLength="12" FixedLength="true" Unicode="true" />
+          <Property Name="nombreRol" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="estado" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="tbUsuarios" Relationship="dbProyectoINAModel.FK_tbUsuarios_tbRoles1" FromRole="tbRoles" ToRole="tbUsuarios" />
         </EntityType>
         <EntityType Name="tbTipoClientes">
           <Key>
@@ -119,7 +192,20 @@
           <Property Name="estado" Type="Boolean" Nullable="false" />
           <NavigationProperty Name="tbClientes" Relationship="dbProyectoINAModel.FK_tbClientes_tbTipoClientes" FromRole="tbTipoClientes" ToRole="tbClientes" />
         </EntityType>
-        <Association Name="FK_tbClientes_tbPersona1">
+        <EntityType Name="tbUsuarios">
+          <Key>
+            <PropertyRef Name="cedula" />
+          </Key>
+          <Property Name="cedula" Type="String" Nullable="false" MaxLength="12" FixedLength="true" Unicode="true" />
+          <Property Name="nombre" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="fechaIngreso" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="password" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="rol" Type="String" Nullable="false" MaxLength="12" FixedLength="true" Unicode="true" />
+          <Property Name="estado" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="tbPersona" Relationship="dbProyectoINAModel.FK_tbUsuarios_tbPersona" FromRole="tbUsuarios" ToRole="tbPersona" />
+          <NavigationProperty Name="tbRoles" Relationship="dbProyectoINAModel.FK_tbUsuarios_tbRoles1" FromRole="tbUsuarios" ToRole="tbRoles" />
+        </EntityType>
+        <Association Name="FK_tbClientes_tbPersona">
           <End Type="dbProyectoINAModel.tbPersona" Role="tbPersona" Multiplicity="1" />
           <End Type="dbProyectoINAModel.tbClientes" Role="tbClientes" Multiplicity="0..1" />
           <ReferentialConstraint>
@@ -143,7 +229,31 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-      </Schema>
+        <Association Name="FK_tbUsuarios_tbPersona">
+          <End Type="dbProyectoINAModel.tbPersona" Role="tbPersona" Multiplicity="1" />
+          <End Type="dbProyectoINAModel.tbUsuarios" Role="tbUsuarios" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="tbPersona">
+              <PropertyRef Name="cedula" />
+            </Principal>
+            <Dependent Role="tbUsuarios">
+              <PropertyRef Name="cedula" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbUsuarios_tbRoles1">
+          <End Type="dbProyectoINAModel.tbRoles" Role="tbRoles" Multiplicity="1" />
+          <End Type="dbProyectoINAModel.tbUsuarios" Role="tbUsuarios" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbRoles">
+              <PropertyRef Name="rol" />
+            </Principal>
+            <Dependent Role="tbUsuarios">
+              <PropertyRef Name="rol" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
@@ -171,12 +281,33 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="tbRoles">
+            <EntityTypeMapping TypeName="dbProyectoINAModel.tbRoles">
+              <MappingFragment StoreEntitySet="tbRoles">
+                <ScalarProperty Name="estado" ColumnName="estado" />
+                <ScalarProperty Name="nombreRol" ColumnName="nombreRol" />
+                <ScalarProperty Name="rol" ColumnName="rol" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="tbTipoClientes">
             <EntityTypeMapping TypeName="dbProyectoINAModel.tbTipoClientes">
               <MappingFragment StoreEntitySet="tbTipoClientes">
                 <ScalarProperty Name="estado" ColumnName="estado" />
                 <ScalarProperty Name="nombre" ColumnName="nombre" />
                 <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbUsuarios">
+            <EntityTypeMapping TypeName="dbProyectoINAModel.tbUsuarios">
+              <MappingFragment StoreEntitySet="tbUsuarios">
+                <ScalarProperty Name="estado" ColumnName="estado" />
+                <ScalarProperty Name="rol" ColumnName="rol" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="fechaIngreso" ColumnName="fechaIngreso" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="cedula" ColumnName="cedula" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
