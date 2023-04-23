@@ -1,0 +1,70 @@
+C:\Users\Anthonny MB\source\repos\ProyectoINA\BL\bin\Debug\BL.dll
+C:\Users\Anthonny MB\source\repos\ProyectoINA\BL\bin\Debug\BL.pdb
+C:\Users\Anthonny MB\source\repos\ProyectoINA\BL\bin\Debug\DLL.dll
+C:\Users\Anthonny MB\source\repos\ProyectoINA\BL\bin\Debug\DTO.dll
+C:\Users\Anthonny MB\source\repos\ProyectoINA\BL\bin\Debug\Utility.dll
+C:\Users\Anthonny MB\source\repos\ProyectoINA\BL\bin\Debug\DLL.pdb
+C:\Users\Anthonny MB\source\repos\ProyectoINA\BL\bin\Debug\DTO.pdb
+C:\Users\Anthonny MB\source\repos\ProyectoINA\BL\bin\Debug\Utility.pdb
+C:\Users\Anthonny MB\source\repos\ProyectoINA\BL\obj\Debug\BL.csprojAssemblyReference.cache
+C:\Users\Anthonny MB\source\repos\ProyectoINA\BL\obj\Debug\BL.csproj.CoreCompileInputs.cache
+C:\Users\Anthonny MB\source\repos\ProyectoINA\BL\obj\Debug\BL.csproj.CopyComplete
+C:\Users\Anthonny MB\source\repos\ProyectoINA\BL\obj\Debug\BL.dll
+C:\Users\Anthonny MB\source\repos\ProyectoINA\BL\obj\Debug\BL.pdb
+C:\Users\CRPP15\Documents\ProyectoINA\BL\bin\Debug\BL.dll.config
+C:\Users\CRPP15\Documents\ProyectoINA\BL\bin\Debug\BL.dll
+C:\Users\CRPP15\Documents\ProyectoINA\BL\bin\Debug\BL.pdb
+C:\Users\CRPP15\Documents\ProyectoINA\BL\bin\Debug\DLL.dll
+C:\Users\CRPP15\Documents\ProyectoINA\BL\bin\Debug\Entities.dll
+C:\Users\CRPP15\Documents\ProyectoINA\BL\bin\Debug\EntityFramework.dll
+C:\Users\CRPP15\Documents\ProyectoINA\BL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\CRPP15\Documents\ProyectoINA\BL\bin\Debug\Utility.dll
+C:\Users\CRPP15\Documents\ProyectoINA\BL\bin\Debug\DLL.pdb
+C:\Users\CRPP15\Documents\ProyectoINA\BL\bin\Debug\DLL.dll.config
+C:\Users\CRPP15\Documents\ProyectoINA\BL\bin\Debug\Entities.pdb
+C:\Users\CRPP15\Documents\ProyectoINA\BL\bin\Debug\Utility.pdb
+C:\Users\CRPP15\Documents\ProyectoINA\BL\bin\Debug\EntityFramework.xml
+C:\Users\CRPP15\Documents\ProyectoINA\BL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\CRPP15\Documents\ProyectoINA\BL\obj\Debug\BL.csproj.AssemblyReference.cache
+C:\Users\CRPP15\Documents\ProyectoINA\BL\obj\Debug\BL.csproj.CoreCompileInputs.cache
+C:\Users\CRPP15\Documents\ProyectoINA\BL\obj\Debug\BL.csproj.CopyComplete
+C:\Users\CRPP15\Documents\ProyectoINA\BL\obj\Debug\BL.dll
+C:\Users\CRPP15\Documents\ProyectoINA\BL\obj\Debug\BL.pdb
+D:\ProyectoINA\BL\bin\Debug\BL.dll.config
+D:\ProyectoINA\BL\bin\Debug\BL.dll
+D:\ProyectoINA\BL\bin\Debug\BL.pdb
+D:\ProyectoINA\BL\bin\Debug\DLL.dll
+D:\ProyectoINA\BL\bin\Debug\Entities.dll
+D:\ProyectoINA\BL\bin\Debug\EntityFramework.dll
+D:\ProyectoINA\BL\bin\Debug\EntityFramework.SqlServer.dll
+D:\ProyectoINA\BL\bin\Debug\Utility.dll
+D:\ProyectoINA\BL\bin\Debug\DLL.pdb
+D:\ProyectoINA\BL\bin\Debug\DLL.dll.config
+D:\ProyectoINA\BL\bin\Debug\Entities.pdb
+D:\ProyectoINA\BL\bin\Debug\Utility.pdb
+D:\ProyectoINA\BL\bin\Debug\EntityFramework.xml
+D:\ProyectoINA\BL\bin\Debug\EntityFramework.SqlServer.xml
+D:\ProyectoINA\BL\obj\Debug\BL.csproj.AssemblyReference.cache
+D:\ProyectoINA\BL\obj\Debug\BL.csproj.CoreCompileInputs.cache
+D:\ProyectoINA\BL\obj\Debug\BL.csproj.CopyComplete
+D:\ProyectoINA\BL\obj\Debug\BL.dll
+D:\ProyectoINA\BL\obj\Debug\BL.pdb
+C:\Users\CRPP13\Desktop\ProyectoINA\BL\bin\Debug\BL.dll.config
+C:\Users\CRPP13\Desktop\ProyectoINA\BL\bin\Debug\BL.dll
+C:\Users\CRPP13\Desktop\ProyectoINA\BL\bin\Debug\BL.pdb
+C:\Users\CRPP13\Desktop\ProyectoINA\BL\bin\Debug\DLL.dll
+C:\Users\CRPP13\Desktop\ProyectoINA\BL\bin\Debug\Entities.dll
+C:\Users\CRPP13\Desktop\ProyectoINA\BL\bin\Debug\EntityFramework.dll
+C:\Users\CRPP13\Desktop\ProyectoINA\BL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\CRPP13\Desktop\ProyectoINA\BL\bin\Debug\Utility.dll
+C:\Users\CRPP13\Desktop\ProyectoINA\BL\bin\Debug\DLL.pdb
+C:\Users\CRPP13\Desktop\ProyectoINA\BL\bin\Debug\DLL.dll.config
+C:\Users\CRPP13\Desktop\ProyectoINA\BL\bin\Debug\Entities.pdb
+C:\Users\CRPP13\Desktop\ProyectoINA\BL\bin\Debug\Utility.pdb
+C:\Users\CRPP13\Desktop\ProyectoINA\BL\bin\Debug\EntityFramework.xml
+C:\Users\CRPP13\Desktop\ProyectoINA\BL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\CRPP13\Desktop\ProyectoINA\BL\obj\Debug\BL.csproj.AssemblyReference.cache
+C:\Users\CRPP13\Desktop\ProyectoINA\BL\obj\Debug\BL.csproj.CoreCompileInputs.cache
+C:\Users\CRPP13\Desktop\ProyectoINA\BL\obj\Debug\BL.csproj.CopyComplete
+C:\Users\CRPP13\Desktop\ProyectoINA\BL\obj\Debug\BL.dll
+C:\Users\CRPP13\Desktop\ProyectoINA\BL\obj\Debug\BL.pdb

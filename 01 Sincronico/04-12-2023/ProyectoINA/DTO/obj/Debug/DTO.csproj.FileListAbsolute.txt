@@ -1,0 +1,6 @@
+C:\Users\laury\Downloads\Portafolio de trabajo Michael Alvarez H\05 .NET\01 Sincronico\ProyectoINA\DTO\bin\Debug\DTO.dll
+C:\Users\laury\Downloads\Portafolio de trabajo Michael Alvarez H\05 .NET\01 Sincronico\ProyectoINA\DTO\bin\Debug\DTO.pdb
+C:\Users\laury\Downloads\Portafolio de trabajo Michael Alvarez H\05 .NET\01 Sincronico\ProyectoINA\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
+C:\Users\laury\Downloads\Portafolio de trabajo Michael Alvarez H\05 .NET\01 Sincronico\ProyectoINA\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+C:\Users\laury\Downloads\Portafolio de trabajo Michael Alvarez H\05 .NET\01 Sincronico\ProyectoINA\DTO\obj\Debug\DTO.dll
+C:\Users\laury\Downloads\Portafolio de trabajo Michael Alvarez H\05 .NET\01 Sincronico\ProyectoINA\DTO\obj\Debug\DTO.pdb

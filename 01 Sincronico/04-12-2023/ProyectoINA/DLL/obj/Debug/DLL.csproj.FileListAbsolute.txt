@@ -1,0 +1,27 @@
+C:\Users\Anthonny MB\source\repos\ProyectoINA\DLL\bin\Debug\DLL.dll
+C:\Users\Anthonny MB\source\repos\ProyectoINA\DLL\bin\Debug\DLL.pdb
+C:\Users\Anthonny MB\source\repos\ProyectoINA\DLL\bin\Debug\DTO.dll
+C:\Users\Anthonny MB\source\repos\ProyectoINA\DLL\bin\Debug\Utility.dll
+C:\Users\Anthonny MB\source\repos\ProyectoINA\DLL\bin\Debug\DTO.pdb
+C:\Users\Anthonny MB\source\repos\ProyectoINA\DLL\bin\Debug\Utility.pdb
+C:\Users\Anthonny MB\source\repos\ProyectoINA\DLL\obj\Debug\DLL.csprojAssemblyReference.cache
+C:\Users\Anthonny MB\source\repos\ProyectoINA\DLL\obj\Debug\DLL.csproj.CoreCompileInputs.cache
+C:\Users\Anthonny MB\source\repos\ProyectoINA\DLL\obj\Debug\DLL.csproj.CopyComplete
+C:\Users\Anthonny MB\source\repos\ProyectoINA\DLL\obj\Debug\DLL.dll
+C:\Users\Anthonny MB\source\repos\ProyectoINA\DLL\obj\Debug\DLL.pdb
+C:\Users\CRPP15\Documents\ProyectoINA\DLL\bin\Debug\DLL.dll.config
+C:\Users\CRPP15\Documents\ProyectoINA\DLL\bin\Debug\DLL.dll
+C:\Users\CRPP15\Documents\ProyectoINA\DLL\bin\Debug\DLL.pdb
+C:\Users\CRPP15\Documents\ProyectoINA\DLL\bin\Debug\Entities.dll
+C:\Users\CRPP15\Documents\ProyectoINA\DLL\bin\Debug\EntityFramework.dll
+C:\Users\CRPP15\Documents\ProyectoINA\DLL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\CRPP15\Documents\ProyectoINA\DLL\bin\Debug\Utility.dll
+C:\Users\CRPP15\Documents\ProyectoINA\DLL\bin\Debug\Entities.pdb
+C:\Users\CRPP15\Documents\ProyectoINA\DLL\bin\Debug\Utility.pdb
+C:\Users\CRPP15\Documents\ProyectoINA\DLL\bin\Debug\EntityFramework.xml
+C:\Users\CRPP15\Documents\ProyectoINA\DLL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\CRPP15\Documents\ProyectoINA\DLL\obj\Debug\DLL.csproj.AssemblyReference.cache
+C:\Users\CRPP15\Documents\ProyectoINA\DLL\obj\Debug\DLL.csproj.CoreCompileInputs.cache
+C:\Users\CRPP15\Documents\ProyectoINA\DLL\obj\Debug\DLL.csproj.CopyComplete
+C:\Users\CRPP15\Documents\ProyectoINA\DLL\obj\Debug\DLL.dll
+C:\Users\CRPP15\Documents\ProyectoINA\DLL\obj\Debug\DLL.pdb

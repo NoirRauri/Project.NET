@@ -1,0 +1,24 @@
+C:\Users\Anthonny MB\source\repos\ProyectoINA\Utility\bin\Debug\Utility.dll
+C:\Users\Anthonny MB\source\repos\ProyectoINA\Utility\bin\Debug\Utility.pdb
+C:\Users\Anthonny MB\source\repos\ProyectoINA\Utility\obj\Debug\Utility.csprojAssemblyReference.cache
+C:\Users\Anthonny MB\source\repos\ProyectoINA\Utility\obj\Debug\Utility.csproj.CoreCompileInputs.cache
+C:\Users\Anthonny MB\source\repos\ProyectoINA\Utility\obj\Debug\Utility.dll
+C:\Users\Anthonny MB\source\repos\ProyectoINA\Utility\obj\Debug\Utility.pdb
+C:\Users\CRPP15\Documents\ProyectoINA\Utility\bin\Debug\Utility.dll
+C:\Users\CRPP15\Documents\ProyectoINA\Utility\bin\Debug\Utility.pdb
+C:\Users\CRPP15\Documents\ProyectoINA\Utility\obj\Debug\Utility.csproj.AssemblyReference.cache
+C:\Users\CRPP15\Documents\ProyectoINA\Utility\obj\Debug\Utility.csproj.CoreCompileInputs.cache
+C:\Users\CRPP15\Documents\ProyectoINA\Utility\obj\Debug\Utility.dll
+C:\Users\CRPP15\Documents\ProyectoINA\Utility\obj\Debug\Utility.pdb
+D:\ProyectoINA\Utility\bin\Debug\Utility.dll
+D:\ProyectoINA\Utility\bin\Debug\Utility.pdb
+D:\ProyectoINA\Utility\obj\Debug\Utility.csproj.AssemblyReference.cache
+D:\ProyectoINA\Utility\obj\Debug\Utility.csproj.CoreCompileInputs.cache
+D:\ProyectoINA\Utility\obj\Debug\Utility.dll
+D:\ProyectoINA\Utility\obj\Debug\Utility.pdb
+C:\Users\CRPP13\Desktop\ProyectoINA\Utility\bin\Debug\Utility.dll
+C:\Users\CRPP13\Desktop\ProyectoINA\Utility\bin\Debug\Utility.pdb
+C:\Users\CRPP13\Desktop\ProyectoINA\Utility\obj\Debug\Utility.csproj.AssemblyReference.cache
+C:\Users\CRPP13\Desktop\ProyectoINA\Utility\obj\Debug\Utility.csproj.CoreCompileInputs.cache
+C:\Users\CRPP13\Desktop\ProyectoINA\Utility\obj\Debug\Utility.dll
+C:\Users\CRPP13\Desktop\ProyectoINA\Utility\obj\Debug\Utility.pdb

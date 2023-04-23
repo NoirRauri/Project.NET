@@ -1,0 +1,103 @@
+C:\Users\Anthonny MB\source\repos\ProyectoINA\ProyectoINAForms\bin\Debug\ProyectoINAForms.exe.config
+C:\Users\Anthonny MB\source\repos\ProyectoINA\ProyectoINAForms\bin\Debug\ProyectoINAForms.exe
+C:\Users\Anthonny MB\source\repos\ProyectoINA\ProyectoINAForms\bin\Debug\ProyectoINAForms.pdb
+C:\Users\Anthonny MB\source\repos\ProyectoINA\ProyectoINAForms\bin\Debug\BL.dll
+C:\Users\Anthonny MB\source\repos\ProyectoINA\ProyectoINAForms\bin\Debug\DTO.dll
+C:\Users\Anthonny MB\source\repos\ProyectoINA\ProyectoINAForms\bin\Debug\Utility.dll
+C:\Users\Anthonny MB\source\repos\ProyectoINA\ProyectoINAForms\bin\Debug\BL.pdb
+C:\Users\Anthonny MB\source\repos\ProyectoINA\ProyectoINAForms\bin\Debug\DTO.pdb
+C:\Users\Anthonny MB\source\repos\ProyectoINA\ProyectoINAForms\bin\Debug\Utility.pdb
+C:\Users\Anthonny MB\source\repos\ProyectoINA\ProyectoINAForms\obj\Debug\ProyectoINAForms.csprojAssemblyReference.cache
+C:\Users\Anthonny MB\source\repos\ProyectoINA\ProyectoINAForms\obj\Debug\ProyectoINAForms.frmListaCliente.resources
+C:\Users\Anthonny MB\source\repos\ProyectoINA\ProyectoINAForms\obj\Debug\ProyectoINAForms.Properties.Resources.resources
+C:\Users\Anthonny MB\source\repos\ProyectoINA\ProyectoINAForms\obj\Debug\ProyectoINAForms.csproj.GenerateResource.cache
+C:\Users\Anthonny MB\source\repos\ProyectoINA\ProyectoINAForms\obj\Debug\ProyectoINAForms.csproj.CoreCompileInputs.cache
+C:\Users\Anthonny MB\source\repos\ProyectoINA\ProyectoINAForms\obj\Debug\ProyectoINAForms.csproj.CopyComplete
+C:\Users\Anthonny MB\source\repos\ProyectoINA\ProyectoINAForms\obj\Debug\ProyectoINAForms.exe
+C:\Users\Anthonny MB\source\repos\ProyectoINA\ProyectoINAForms\obj\Debug\ProyectoINAForms.pdb
+C:\Users\CRPP15\Documents\ProyectoINA\ProyectoINAForms\bin\Debug\ProyectoINAForms.exe.config
+C:\Users\CRPP15\Documents\ProyectoINA\ProyectoINAForms\bin\Debug\ProyectoINAForms.exe
+C:\Users\CRPP15\Documents\ProyectoINA\ProyectoINAForms\bin\Debug\ProyectoINAForms.pdb
+C:\Users\CRPP15\Documents\ProyectoINA\ProyectoINAForms\bin\Debug\BL.dll
+C:\Users\CRPP15\Documents\ProyectoINA\ProyectoINAForms\bin\Debug\Entities.dll
+C:\Users\CRPP15\Documents\ProyectoINA\ProyectoINAForms\bin\Debug\Utility.dll
+C:\Users\CRPP15\Documents\ProyectoINA\ProyectoINAForms\bin\Debug\DLL.dll
+C:\Users\CRPP15\Documents\ProyectoINA\ProyectoINAForms\bin\Debug\EntityFramework.dll
+C:\Users\CRPP15\Documents\ProyectoINA\ProyectoINAForms\bin\Debug\BL.pdb
+C:\Users\CRPP15\Documents\ProyectoINA\ProyectoINAForms\bin\Debug\BL.dll.config
+C:\Users\CRPP15\Documents\ProyectoINA\ProyectoINAForms\bin\Debug\Entities.pdb
+C:\Users\CRPP15\Documents\ProyectoINA\ProyectoINAForms\bin\Debug\Utility.pdb
+C:\Users\CRPP15\Documents\ProyectoINA\ProyectoINAForms\bin\Debug\DLL.pdb
+C:\Users\CRPP15\Documents\ProyectoINA\ProyectoINAForms\bin\Debug\DLL.dll.config
+C:\Users\CRPP15\Documents\ProyectoINA\ProyectoINAForms\bin\Debug\EntityFramework.xml
+C:\Users\CRPP15\Documents\ProyectoINA\ProyectoINAForms\obj\Debug\ProyectoINAForms.csproj.AssemblyReference.cache
+C:\Users\CRPP15\Documents\ProyectoINA\ProyectoINAForms\obj\Debug\ProyectoINAForms.csproj.SuggestedBindingRedirects.cache
+C:\Users\CRPP15\Documents\ProyectoINA\ProyectoINAForms\obj\Debug\ProyectoINAForms.frmListaCliente.resources
+C:\Users\CRPP15\Documents\ProyectoINA\ProyectoINAForms\obj\Debug\ProyectoINAForms.Properties.Resources.resources
+C:\Users\CRPP15\Documents\ProyectoINA\ProyectoINAForms\obj\Debug\ProyectoINAForms.csproj.GenerateResource.cache
+C:\Users\CRPP15\Documents\ProyectoINA\ProyectoINAForms\obj\Debug\ProyectoINAForms.csproj.CoreCompileInputs.cache
+C:\Users\CRPP15\Documents\ProyectoINA\ProyectoINAForms\obj\Debug\ProyectoINAForms.csproj.CopyComplete
+C:\Users\CRPP15\Documents\ProyectoINA\ProyectoINAForms\obj\Debug\ProyectoINAForms.exe
+C:\Users\CRPP15\Documents\ProyectoINA\ProyectoINAForms\obj\Debug\ProyectoINAForms.pdb
+C:\Users\CRPP15\Documents\ProyectoINA\ProyectoINAForms\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\CRPP15\Documents\ProyectoINA\ProyectoINAForms\bin\Debug\EntityFramework.SqlServer.xml
+D:\ProyectoINA\ProyectoINAForms\bin\Debug\ProyectoINAForms.exe.config
+D:\ProyectoINA\ProyectoINAForms\bin\Debug\ProyectoINAForms.exe
+D:\ProyectoINA\ProyectoINAForms\bin\Debug\ProyectoINAForms.pdb
+D:\ProyectoINA\ProyectoINAForms\bin\Debug\BL.dll
+D:\ProyectoINA\ProyectoINAForms\bin\Debug\Entities.dll
+D:\ProyectoINA\ProyectoINAForms\bin\Debug\EntityFramework.dll
+D:\ProyectoINA\ProyectoINAForms\bin\Debug\EntityFramework.SqlServer.dll
+D:\ProyectoINA\ProyectoINAForms\bin\Debug\Utility.dll
+D:\ProyectoINA\ProyectoINAForms\bin\Debug\DLL.dll
+D:\ProyectoINA\ProyectoINAForms\bin\Debug\BL.pdb
+D:\ProyectoINA\ProyectoINAForms\bin\Debug\BL.dll.config
+D:\ProyectoINA\ProyectoINAForms\bin\Debug\Entities.pdb
+D:\ProyectoINA\ProyectoINAForms\bin\Debug\Utility.pdb
+D:\ProyectoINA\ProyectoINAForms\bin\Debug\EntityFramework.xml
+D:\ProyectoINA\ProyectoINAForms\bin\Debug\EntityFramework.SqlServer.xml
+D:\ProyectoINA\ProyectoINAForms\bin\Debug\DLL.pdb
+D:\ProyectoINA\ProyectoINAForms\bin\Debug\DLL.dll.config
+D:\ProyectoINA\ProyectoINAForms\obj\Debug\ProyectoINAForms.csproj.AssemblyReference.cache
+D:\ProyectoINA\ProyectoINAForms\obj\Debug\ProyectoINAForms.csproj.SuggestedBindingRedirects.cache
+D:\ProyectoINA\ProyectoINAForms\obj\Debug\ProyectoINAForms.frmListaCliente.resources
+D:\ProyectoINA\ProyectoINAForms\obj\Debug\ProyectoINAForms.Properties.Resources.resources
+D:\ProyectoINA\ProyectoINAForms\obj\Debug\ProyectoINAForms.csproj.GenerateResource.cache
+D:\ProyectoINA\ProyectoINAForms\obj\Debug\ProyectoINAForms.csproj.CoreCompileInputs.cache
+D:\ProyectoINA\ProyectoINAForms\obj\Debug\ProyectoINAForms.csproj.CopyComplete
+D:\ProyectoINA\ProyectoINAForms\obj\Debug\ProyectoINAForms.exe
+D:\ProyectoINA\ProyectoINAForms\obj\Debug\ProyectoINAForms.pdb
+D:\ProyectoINA\ProyectoINAForms\obj\Debug\ProyectoINAForms.frmClientes.resources
+D:\ProyectoINA\ProyectoINAForms\obj\Debug\ProyectoINAForms.frmListaUsuarios.resources
+D:\ProyectoINA\ProyectoINAForms\obj\Debug\ProyectoINAForms.frmCrearUsuario.resources
+D:\ProyectoINA\ProyectoINAForms\obj\Debug\ProyectoINAForms.frmPrincipal.resources
+C:\Users\CRPP13\Desktop\ProyectoINA\ProyectoINAForms\obj\Debug\ProyectoINAForms.csproj.AssemblyReference.cache
+C:\Users\CRPP13\Desktop\ProyectoINA\ProyectoINAForms\obj\Debug\ProyectoINAForms.csproj.SuggestedBindingRedirects.cache
+C:\Users\CRPP13\Desktop\ProyectoINA\ProyectoINAForms\obj\Debug\ProyectoINAForms.frmClientes.resources
+C:\Users\CRPP13\Desktop\ProyectoINA\ProyectoINAForms\obj\Debug\ProyectoINAForms.frmCrearUsuario.resources
+C:\Users\CRPP13\Desktop\ProyectoINA\ProyectoINAForms\obj\Debug\ProyectoINAForms.frmListaCliente.resources
+C:\Users\CRPP13\Desktop\ProyectoINA\ProyectoINAForms\obj\Debug\ProyectoINAForms.frmListaUsuarios.resources
+C:\Users\CRPP13\Desktop\ProyectoINA\ProyectoINAForms\obj\Debug\ProyectoINAForms.frmPrincipal.resources
+C:\Users\CRPP13\Desktop\ProyectoINA\ProyectoINAForms\obj\Debug\ProyectoINAForms.Properties.Resources.resources
+C:\Users\CRPP13\Desktop\ProyectoINA\ProyectoINAForms\obj\Debug\ProyectoINAForms.csproj.GenerateResource.cache
+C:\Users\CRPP13\Desktop\ProyectoINA\ProyectoINAForms\obj\Debug\ProyectoINAForms.csproj.CoreCompileInputs.cache
+C:\Users\CRPP13\Desktop\ProyectoINA\ProyectoINAForms\obj\Debug\ProyectoINAForms.exe
+C:\Users\CRPP13\Desktop\ProyectoINA\ProyectoINAForms\obj\Debug\ProyectoINAForms.pdb
+C:\Users\CRPP13\Desktop\ProyectoINA\ProyectoINAForms\bin\Debug\ProyectoINAForms.exe.config
+C:\Users\CRPP13\Desktop\ProyectoINA\ProyectoINAForms\bin\Debug\ProyectoINAForms.exe
+C:\Users\CRPP13\Desktop\ProyectoINA\ProyectoINAForms\bin\Debug\ProyectoINAForms.pdb
+C:\Users\CRPP13\Desktop\ProyectoINA\ProyectoINAForms\bin\Debug\BL.dll
+C:\Users\CRPP13\Desktop\ProyectoINA\ProyectoINAForms\bin\Debug\Entities.dll
+C:\Users\CRPP13\Desktop\ProyectoINA\ProyectoINAForms\bin\Debug\EntityFramework.dll
+C:\Users\CRPP13\Desktop\ProyectoINA\ProyectoINAForms\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\CRPP13\Desktop\ProyectoINA\ProyectoINAForms\bin\Debug\Utility.dll
+C:\Users\CRPP13\Desktop\ProyectoINA\ProyectoINAForms\bin\Debug\DLL.dll
+C:\Users\CRPP13\Desktop\ProyectoINA\ProyectoINAForms\bin\Debug\BL.pdb
+C:\Users\CRPP13\Desktop\ProyectoINA\ProyectoINAForms\bin\Debug\BL.dll.config
+C:\Users\CRPP13\Desktop\ProyectoINA\ProyectoINAForms\bin\Debug\Entities.pdb
+C:\Users\CRPP13\Desktop\ProyectoINA\ProyectoINAForms\bin\Debug\Utility.pdb
+C:\Users\CRPP13\Desktop\ProyectoINA\ProyectoINAForms\bin\Debug\EntityFramework.xml
+C:\Users\CRPP13\Desktop\ProyectoINA\ProyectoINAForms\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\CRPP13\Desktop\ProyectoINA\ProyectoINAForms\bin\Debug\DLL.pdb
+C:\Users\CRPP13\Desktop\ProyectoINA\ProyectoINAForms\bin\Debug\DLL.dll.config
+C:\Users\CRPP13\Desktop\ProyectoINA\ProyectoINAForms\obj\Debug\ProyectoINAForms.csproj.CopyComplete

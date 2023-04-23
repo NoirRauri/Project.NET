@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="dbProyectoINAModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="tbClientes">
+          <Key>
+            <PropertyRef Name="cedula" />
+          </Key>
+          <Property Name="cedula" Type="nchar" MaxLength="12" Nullable="false" />
+          <Property Name="tipoCliente" Type="int" Nullable="false" />
+          <Property Name="descMax" Type="int" Nullable="false" />
+          <Property Name="foto" Type="image" />
+        </EntityType>
+        <EntityType Name="tbPersona">
+          <Key>
+            <PropertyRef Name="cedula" />
+          </Key>
+          <Property Name="cedula" Type="nchar" MaxLength="12" Nullable="false" />
+          <Property Name="nombre" Type="nchar" MaxLength="50" Nullable="false" />
+          <Property Name="apellido1" Type="nchar" MaxLength="50" Nullable="false" />
+          <Property Name="apellido2" Type="nchar" MaxLength="50" Nullable="false" />
+          <Property Name="genero" Type="int" Nullable="false" />
+          <Property Name="fechaNac" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbTipoClientes">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="nombre" Type="nchar" MaxLength="50" Nullable="false" />
+          <Property Name="estado" Type="bit" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_tbClientes_tbTipoClientes">
+          <End Role="tbTipoClientes" Type="Self.tbTipoClientes" Multiplicity="1" />
+          <End Role="tbClientes" Type="Self.tbClientes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbTipoClientes">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tbClientes">
+              <PropertyRef Name="tipoCliente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbPersona_tbClientes">
+          <End Role="tbClientes" Type="Self.tbClientes" Multiplicity="1" />
+          <End Role="tbPersona" Type="Self.tbPersona" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="tbClientes">
+              <PropertyRef Name="cedula" />
+            </Principal>
+            <Dependent Role="tbPersona">
+              <PropertyRef Name="cedula" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="dbProyectoINAModelStoreContainer">
+          <EntitySet Name="tbClientes" EntityType="Self.tbClientes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbPersona" EntityType="Self.tbPersona" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbTipoClientes" EntityType="Self.tbTipoClientes" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_tbClientes_tbTipoClientes" Association="Self.FK_tbClientes_tbTipoClientes">
+            <End Role="tbTipoClientes" EntitySet="tbTipoClientes" />
+            <End Role="tbClientes" EntitySet="tbClientes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbPersona_tbClientes" Association="Self.FK_tbPersona_tbClientes">
+            <End Role="tbClientes" EntitySet="tbClientes" />
+            <End Role="tbPersona" EntitySet="tbPersona" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="dbProyectoINAModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="tbClientes">
+          <Key>
+            <PropertyRef Name="cedula" />
+          </Key>
+          <Property Name="cedula" Type="String" MaxLength="12" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="tipoCliente" Type="Int32" Nullable="false" />
+          <Property Name="descMax" Type="Int32" Nullable="false" />
+          <Property Name="foto" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <NavigationProperty Name="tbTipoClientes" Relationship="Self.FK_tbClientes_tbTipoClientes" FromRole="tbClientes" ToRole="tbTipoClientes" />
+          <NavigationProperty Name="tbPersona" Relationship="Self.FK_tbPersona_tbClientes" FromRole="tbClientes" ToRole="tbPersona" />
+        </EntityType>
+        <EntityType Name="tbPersona">
+          <Key>
+            <PropertyRef Name="cedula" />
+          </Key>
+          <Property Name="cedula" Type="String" MaxLength="12" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="nombre" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="apellido1" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="apellido2" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="genero" Type="Int32" Nullable="false" />
+          <Property Name="fechaNac" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="tbClientes" Relationship="Self.FK_tbPersona_tbClientes" FromRole="tbPersona" ToRole="tbClientes" />
+        </EntityType>
+        <EntityType Name="tbTipoClientes">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="nombre" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="estado" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="tbClientes" Relationship="Self.FK_tbClientes_tbTipoClientes" FromRole="tbTipoClientes" ToRole="tbClientes" />
+        </EntityType>
+        <Association Name="FK_tbClientes_tbTipoClientes">
+          <End Role="tbTipoClientes" Type="Self.tbTipoClientes" Multiplicity="1" />
+          <End Role="tbClientes" Type="Self.tbClientes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbTipoClientes">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tbClientes">
+              <PropertyRef Name="tipoCliente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbPersona_tbClientes">
+          <End Role="tbClientes" Type="Self.tbClientes" Multiplicity="1" />
+          <End Role="tbPersona" Type="Self.tbPersona" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="tbClientes">
+              <PropertyRef Name="cedula" />
+            </Principal>
+            <Dependent Role="tbPersona">
+              <PropertyRef Name="cedula" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="dbProyectoINAEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tbClientes" EntityType="Self.tbClientes" />
+          <EntitySet Name="tbPersona" EntityType="Self.tbPersona" />
+          <EntitySet Name="tbTipoClientes" EntityType="Self.tbTipoClientes" />
+          <AssociationSet Name="FK_tbClientes_tbTipoClientes" Association="Self.FK_tbClientes_tbTipoClientes">
+            <End Role="tbTipoClientes" EntitySet="tbTipoClientes" />
+            <End Role="tbClientes" EntitySet="tbClientes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbPersona_tbClientes" Association="Self.FK_tbPersona_tbClientes">
+            <End Role="tbClientes" EntitySet="tbClientes" />
+            <End Role="tbPersona" EntitySet="tbPersona" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="dbProyectoINAModelStoreContainer" CdmEntityContainer="dbProyectoINAEntities">
+          <EntitySetMapping Name="tbClientes">
+            <EntityTypeMapping TypeName="dbProyectoINAModel.tbClientes">
+              <MappingFragment StoreEntitySet="tbClientes">
+                <ScalarProperty Name="cedula" ColumnName="cedula" />
+                <ScalarProperty Name="tipoCliente" ColumnName="tipoCliente" />
+                <ScalarProperty Name="descMax" ColumnName="descMax" />
+                <ScalarProperty Name="foto" ColumnName="foto" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbPersona">
+            <EntityTypeMapping TypeName="dbProyectoINAModel.tbPersona">
+              <MappingFragment StoreEntitySet="tbPersona">
+                <ScalarProperty Name="cedula" ColumnName="cedula" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="apellido1" ColumnName="apellido1" />
+                <ScalarProperty Name="apellido2" ColumnName="apellido2" />
+                <ScalarProperty Name="genero" ColumnName="genero" />
+                <ScalarProperty Name="fechaNac" ColumnName="fechaNac" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbTipoClientes">
+            <EntityTypeMapping TypeName="dbProyectoINAModel.tbTipoClientes">
+              <MappingFragment StoreEntitySet="tbTipoClientes">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="estado" ColumnName="estado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
