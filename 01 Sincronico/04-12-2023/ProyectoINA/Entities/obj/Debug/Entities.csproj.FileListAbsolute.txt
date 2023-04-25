@@ -31,3 +31,14 @@ C:\Users\CRPP13\Desktop\ProyectoINA\Entities\obj\Debug\Entities.csproj.CoreCompi
 C:\Users\CRPP13\Desktop\ProyectoINA\Entities\obj\Debug\Entities.csproj.CopyComplete
 C:\Users\CRPP13\Desktop\ProyectoINA\Entities\obj\Debug\Entities.dll
 C:\Users\CRPP13\Desktop\ProyectoINA\Entities\obj\Debug\Entities.pdb
+C:\Users\laury\Downloads\Portafolio de trabajo Michael Alvarez H\05 .NET\01 Sincronico\04-12-2023\ProyectoINA\Entities\bin\Debug\Entities.dll
+C:\Users\laury\Downloads\Portafolio de trabajo Michael Alvarez H\05 .NET\01 Sincronico\04-12-2023\ProyectoINA\Entities\bin\Debug\Entities.pdb
+C:\Users\laury\Downloads\Portafolio de trabajo Michael Alvarez H\05 .NET\01 Sincronico\04-12-2023\ProyectoINA\Entities\bin\Debug\EntityFramework.dll
+C:\Users\laury\Downloads\Portafolio de trabajo Michael Alvarez H\05 .NET\01 Sincronico\04-12-2023\ProyectoINA\Entities\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\laury\Downloads\Portafolio de trabajo Michael Alvarez H\05 .NET\01 Sincronico\04-12-2023\ProyectoINA\Entities\bin\Debug\EntityFramework.xml
+C:\Users\laury\Downloads\Portafolio de trabajo Michael Alvarez H\05 .NET\01 Sincronico\04-12-2023\ProyectoINA\Entities\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\laury\Downloads\Portafolio de trabajo Michael Alvarez H\05 .NET\01 Sincronico\04-12-2023\ProyectoINA\Entities\obj\Debug\Entities.csproj.AssemblyReference.cache
+C:\Users\laury\Downloads\Portafolio de trabajo Michael Alvarez H\05 .NET\01 Sincronico\04-12-2023\ProyectoINA\Entities\obj\Debug\Entities.csproj.CoreCompileInputs.cache
+C:\Users\laury\Downloads\Portafolio de trabajo Michael Alvarez H\05 .NET\01 Sincronico\04-12-2023\ProyectoINA\Entities\obj\Debug\Entities.csproj.CopyComplete
+C:\Users\laury\Downloads\Portafolio de trabajo Michael Alvarez H\05 .NET\01 Sincronico\04-12-2023\ProyectoINA\Entities\obj\Debug\Entities.dll
+C:\Users\laury\Downloads\Portafolio de trabajo Michael Alvarez H\05 .NET\01 Sincronico\04-12-2023\ProyectoINA\Entities\obj\Debug\Entities.pdb

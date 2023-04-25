@@ -22,3 +22,9 @@ C:\Users\CRPP13\Desktop\ProyectoINA\Utility\obj\Debug\Utility.csproj.AssemblyRef
 C:\Users\CRPP13\Desktop\ProyectoINA\Utility\obj\Debug\Utility.csproj.CoreCompileInputs.cache
 C:\Users\CRPP13\Desktop\ProyectoINA\Utility\obj\Debug\Utility.dll
 C:\Users\CRPP13\Desktop\ProyectoINA\Utility\obj\Debug\Utility.pdb
+C:\Users\laury\Downloads\Portafolio de trabajo Michael Alvarez H\05 .NET\01 Sincronico\04-12-2023\ProyectoINA\Utility\bin\Debug\Utility.dll
+C:\Users\laury\Downloads\Portafolio de trabajo Michael Alvarez H\05 .NET\01 Sincronico\04-12-2023\ProyectoINA\Utility\bin\Debug\Utility.pdb
+C:\Users\laury\Downloads\Portafolio de trabajo Michael Alvarez H\05 .NET\01 Sincronico\04-12-2023\ProyectoINA\Utility\obj\Debug\Utility.csproj.AssemblyReference.cache
+C:\Users\laury\Downloads\Portafolio de trabajo Michael Alvarez H\05 .NET\01 Sincronico\04-12-2023\ProyectoINA\Utility\obj\Debug\Utility.csproj.CoreCompileInputs.cache
+C:\Users\laury\Downloads\Portafolio de trabajo Michael Alvarez H\05 .NET\01 Sincronico\04-12-2023\ProyectoINA\Utility\obj\Debug\Utility.dll
+C:\Users\laury\Downloads\Portafolio de trabajo Michael Alvarez H\05 .NET\01 Sincronico\04-12-2023\ProyectoINA\Utility\obj\Debug\Utility.pdb

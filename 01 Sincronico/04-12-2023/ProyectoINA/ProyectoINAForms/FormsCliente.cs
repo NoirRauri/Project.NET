@@ -95,6 +95,7 @@ namespace ProyectoINAForms
                 this.Close();
 
             }
+
             catch (EntityExistDBException ex) 
             {
                 MessageBox.Show(ex.Message);
@@ -105,7 +106,6 @@ namespace ProyectoINAForms
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show("Error al guardar");
             }
         }

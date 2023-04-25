@@ -68,3 +68,22 @@ C:\Users\CRPP13\Desktop\ProyectoINA\BL\obj\Debug\BL.csproj.CoreCompileInputs.cac
 C:\Users\CRPP13\Desktop\ProyectoINA\BL\obj\Debug\BL.csproj.CopyComplete
 C:\Users\CRPP13\Desktop\ProyectoINA\BL\obj\Debug\BL.dll
 C:\Users\CRPP13\Desktop\ProyectoINA\BL\obj\Debug\BL.pdb
+C:\Users\laury\Downloads\Portafolio de trabajo Michael Alvarez H\05 .NET\01 Sincronico\04-12-2023\ProyectoINA\BL\bin\Debug\BL.dll.config
+C:\Users\laury\Downloads\Portafolio de trabajo Michael Alvarez H\05 .NET\01 Sincronico\04-12-2023\ProyectoINA\BL\bin\Debug\BL.dll
+C:\Users\laury\Downloads\Portafolio de trabajo Michael Alvarez H\05 .NET\01 Sincronico\04-12-2023\ProyectoINA\BL\bin\Debug\BL.pdb
+C:\Users\laury\Downloads\Portafolio de trabajo Michael Alvarez H\05 .NET\01 Sincronico\04-12-2023\ProyectoINA\BL\bin\Debug\DLL.dll
+C:\Users\laury\Downloads\Portafolio de trabajo Michael Alvarez H\05 .NET\01 Sincronico\04-12-2023\ProyectoINA\BL\bin\Debug\Entities.dll
+C:\Users\laury\Downloads\Portafolio de trabajo Michael Alvarez H\05 .NET\01 Sincronico\04-12-2023\ProyectoINA\BL\bin\Debug\EntityFramework.dll
+C:\Users\laury\Downloads\Portafolio de trabajo Michael Alvarez H\05 .NET\01 Sincronico\04-12-2023\ProyectoINA\BL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\laury\Downloads\Portafolio de trabajo Michael Alvarez H\05 .NET\01 Sincronico\04-12-2023\ProyectoINA\BL\bin\Debug\Utility.dll
+C:\Users\laury\Downloads\Portafolio de trabajo Michael Alvarez H\05 .NET\01 Sincronico\04-12-2023\ProyectoINA\BL\bin\Debug\DLL.pdb
+C:\Users\laury\Downloads\Portafolio de trabajo Michael Alvarez H\05 .NET\01 Sincronico\04-12-2023\ProyectoINA\BL\bin\Debug\DLL.dll.config
+C:\Users\laury\Downloads\Portafolio de trabajo Michael Alvarez H\05 .NET\01 Sincronico\04-12-2023\ProyectoINA\BL\bin\Debug\Entities.pdb
+C:\Users\laury\Downloads\Portafolio de trabajo Michael Alvarez H\05 .NET\01 Sincronico\04-12-2023\ProyectoINA\BL\bin\Debug\Utility.pdb
+C:\Users\laury\Downloads\Portafolio de trabajo Michael Alvarez H\05 .NET\01 Sincronico\04-12-2023\ProyectoINA\BL\bin\Debug\EntityFramework.xml
+C:\Users\laury\Downloads\Portafolio de trabajo Michael Alvarez H\05 .NET\01 Sincronico\04-12-2023\ProyectoINA\BL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\laury\Downloads\Portafolio de trabajo Michael Alvarez H\05 .NET\01 Sincronico\04-12-2023\ProyectoINA\BL\obj\Debug\BL.csproj.AssemblyReference.cache
+C:\Users\laury\Downloads\Portafolio de trabajo Michael Alvarez H\05 .NET\01 Sincronico\04-12-2023\ProyectoINA\BL\obj\Debug\BL.csproj.CoreCompileInputs.cache
+C:\Users\laury\Downloads\Portafolio de trabajo Michael Alvarez H\05 .NET\01 Sincronico\04-12-2023\ProyectoINA\BL\obj\Debug\BL.csproj.CopyComplete
+C:\Users\laury\Downloads\Portafolio de trabajo Michael Alvarez H\05 .NET\01 Sincronico\04-12-2023\ProyectoINA\BL\obj\Debug\BL.dll
+C:\Users\laury\Downloads\Portafolio de trabajo Michael Alvarez H\05 .NET\01 Sincronico\04-12-2023\ProyectoINA\BL\obj\Debug\BL.pdb

@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MemoryGameModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tbJugadores">
+    <Key>
+      <PropertyRef Name="cedula" />
+    </Key>
+    <Property Name="cedula" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="apellido1" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="apellido2" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="fechaIngreso" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbRecordPlayers">
+    <Key>
+      <PropertyRef Name="idRecordPlayer" />
+    </Key>
+    <Property Name="idRecordPlayer" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="usuario" Type="nvarchar" MaxLength="50" />
+    <Property Name="game" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="tiempo" Type="nvarchar" MaxLength="8" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbUsuarios">
+    <Key>
+      <PropertyRef Name="usuario" />
+    </Key>
+    <Property Name="usuario" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="cedula" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="password" Type="nvarchar" MaxLength="14" Nullable="false" />
+  </EntityType>
+  <Association Name="fk_tbRecordPlayers_tbUsuarios">
+    <End Role="tbUsuarios" Type="Self.tbUsuarios" Multiplicity="0..1" />
+    <End Role="tbRecordPlayers" Type="Self.tbRecordPlayers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbUsuarios">
+        <PropertyRef Name="usuario" />
+      </Principal>
+      <Dependent Role="tbRecordPlayers">
+        <PropertyRef Name="usuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_tbUsuarios_tbJugadores">
+    <End Role="tbJugadores" Type="Self.tbJugadores" Multiplicity="1" />
+    <End Role="tbUsuarios" Type="Self.tbUsuarios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbJugadores">
+        <PropertyRef Name="cedula" />
+      </Principal>
+      <Dependent Role="tbUsuarios">
+        <PropertyRef Name="cedula" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="MemoryGameModelStoreContainer">
+    <EntitySet Name="tbJugadores" EntityType="Self.tbJugadores" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbRecordPlayers" EntityType="Self.tbRecordPlayers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbUsuarios" EntityType="Self.tbUsuarios" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="fk_tbRecordPlayers_tbUsuarios" Association="Self.fk_tbRecordPlayers_tbUsuarios">
+      <End Role="tbUsuarios" EntitySet="tbUsuarios" />
+      <End Role="tbRecordPlayers" EntitySet="tbRecordPlayers" />
+    </AssociationSet>
+    <AssociationSet Name="fk_tbUsuarios_tbJugadores" Association="Self.fk_tbUsuarios_tbJugadores">
+      <End Role="tbJugadores" EntitySet="tbJugadores" />
+      <End Role="tbUsuarios" EntitySet="tbUsuarios" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
