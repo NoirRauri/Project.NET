@@ -57,16 +57,31 @@
     <Compile Include="tbClientes.cs">
       <DependentUpon>ProyectoINAModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="tbDetalleFacturas.cs">
+      <DependentUpon>ProyectoINAModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbFacturas.cs">
+      <DependentUpon>ProyectoINAModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbJugador.cs">
+      <DependentUpon>ProyectoINAModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="tbPersona.cs">
       <DependentUpon>ProyectoINAModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="tbRoles.cs">
+    <Compile Include="tbProductos.cs">
+      <DependentUpon>ProyectoINAModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbRegistroJuego.cs">
       <DependentUpon>ProyectoINAModel.tt</DependentUpon>
     </Compile>
     <Compile Include="tbTipoClientes.cs">
       <DependentUpon>ProyectoINAModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="tbUsuarios.cs">
+    <Compile Include="tbTipoPagos.cs">
+      <DependentUpon>ProyectoINAModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbTipoVentas.cs">
       <DependentUpon>ProyectoINAModel.tt</DependentUpon>
     </Compile>
   </ItemGroup>

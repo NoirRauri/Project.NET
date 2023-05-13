@@ -5,15 +5,24 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="22856ceb8c1c4dfc9ee870afc7fb8c06" Name="Diagram1" ZoomLevel="67">
-        <EntityTypeShape EntityType="dbProyectoINAModel.tbClientes" Width="1.5" PointX="6" PointY="3.5" />
-        <EntityTypeShape EntityType="dbProyectoINAModel.tbPersona" Width="1.5" PointX="0.75" PointY="3.375" />
-        <EntityTypeShape EntityType="dbProyectoINAModel.tbRoles" Width="1.5" PointX="0.75" PointY="0.75" />
-        <EntityTypeShape EntityType="dbProyectoINAModel.tbTipoClientes" Width="1.5" PointX="3.75" PointY="0.75" />
-        <EntityTypeShape EntityType="dbProyectoINAModel.tbUsuarios" Width="1.5" PointX="3" PointY="3.375" />
-        <AssociationConnector Association="dbProyectoINAModel.FK_tbClientes_tbPersona" />
+        <EntityTypeShape EntityType="dbProyectoINAModel.tbClientes" Width="1.5" PointX="3" PointY="1.125" />
+        <EntityTypeShape EntityType="dbProyectoINAModel.tbDetalleFacturas" Width="1.5" PointX="7.5" PointY="1.25" />
+        <EntityTypeShape EntityType="dbProyectoINAModel.tbFacturas" Width="1.5" PointX="5.25" PointY="1" />
+        <EntityTypeShape EntityType="dbProyectoINAModel.tbJugador" Width="1.5" PointX="7.75" PointY="5" />
+        <EntityTypeShape EntityType="dbProyectoINAModel.tbPersona" Width="1.5" PointX="0.75" PointY="1.25" />
+        <EntityTypeShape EntityType="dbProyectoINAModel.tbProductos" Width="1.5" PointX="5.25" PointY="5.375" />
+        <EntityTypeShape EntityType="dbProyectoINAModel.tbRegistroJuego" Width="1.5" PointX="10" PointY="4.875" />
+        <EntityTypeShape EntityType="dbProyectoINAModel.tbTipoClientes" Width="1.5" PointX="0.75" PointY="5.5" />
+        <EntityTypeShape EntityType="dbProyectoINAModel.tbTipoPagos" Width="1.5" PointX="3" PointY="5" />
+        <EntityTypeShape EntityType="dbProyectoINAModel.tbTipoVentas" Width="1.5" PointX="3" PointY="7.5" />
+        <AssociationConnector Association="dbProyectoINAModel.fk_tbClientes_tbFacturas" />
+        <AssociationConnector Association="dbProyectoINAModel.FK_tbClientes_tbPersona1" />
         <AssociationConnector Association="dbProyectoINAModel.FK_tbClientes_tbTipoClientes" />
-        <AssociationConnector Association="dbProyectoINAModel.FK_tbUsuarios_tbPersona" />
-        <AssociationConnector Association="dbProyectoINAModel.FK_tbUsuarios_tbRoles1" />
+        <AssociationConnector Association="dbProyectoINAModel.fk_Facturas_DetalleFacturas" />
+        <AssociationConnector Association="dbProyectoINAModel.fk_Productos_DetalleFacturas" />
+        <AssociationConnector Association="dbProyectoINAModel.fk_tbTipoPago_tbFacturas" />
+        <AssociationConnector Association="dbProyectoINAModel.fk_tbTipoVenta_tbFacturas" />
+        <AssociationConnector Association="dbProyectoINAModel.FK_tbRegistroJuego_tbJugador" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

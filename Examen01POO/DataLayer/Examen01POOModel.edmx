@@ -1,0 +1,256 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="dbExamen1POOModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="tbAutomovil">
+          <Key>
+            <PropertyRef Name="placa" />
+          </Key>
+          <Property Name="placa" Type="int" Nullable="false" />
+          <Property Name="vin" Type="varchar" MaxLength="13" Nullable="false" />
+          <Property Name="marca" Type="int" Nullable="false" />
+          <Property Name="tipo" Type="int" Nullable="false" />
+          <Property Name="color" Type="int" Nullable="false" />
+          <Property Name="estado" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbColor">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="color" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbMarca">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="marca" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbTipoVehiculo">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="tipo" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_tbAutomovil_tbColor">
+          <End Role="tbColor" Type="Self.tbColor" Multiplicity="1" />
+          <End Role="tbAutomovil" Type="Self.tbAutomovil" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbColor">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tbAutomovil">
+              <PropertyRef Name="color" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbAutomovil_tbMarca">
+          <End Role="tbMarca" Type="Self.tbMarca" Multiplicity="1" />
+          <End Role="tbAutomovil" Type="Self.tbAutomovil" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbMarca">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tbAutomovil">
+              <PropertyRef Name="marca" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbAutomovil_tbTipoVehiculo">
+          <End Role="tbTipoVehiculo" Type="Self.tbTipoVehiculo" Multiplicity="1" />
+          <End Role="tbAutomovil" Type="Self.tbAutomovil" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbTipoVehiculo">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tbAutomovil">
+              <PropertyRef Name="tipo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="dbExamen1POOModelStoreContainer">
+          <EntitySet Name="tbAutomovil" EntityType="Self.tbAutomovil" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbColor" EntityType="Self.tbColor" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbMarca" EntityType="Self.tbMarca" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbTipoVehiculo" EntityType="Self.tbTipoVehiculo" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_tbAutomovil_tbColor" Association="Self.FK_tbAutomovil_tbColor">
+            <End Role="tbColor" EntitySet="tbColor" />
+            <End Role="tbAutomovil" EntitySet="tbAutomovil" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbAutomovil_tbMarca" Association="Self.FK_tbAutomovil_tbMarca">
+            <End Role="tbMarca" EntitySet="tbMarca" />
+            <End Role="tbAutomovil" EntitySet="tbAutomovil" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbAutomovil_tbTipoVehiculo" Association="Self.FK_tbAutomovil_tbTipoVehiculo">
+            <End Role="tbTipoVehiculo" EntitySet="tbTipoVehiculo" />
+            <End Role="tbAutomovil" EntitySet="tbAutomovil" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="dbExamen1POOModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="tbAutomovil">
+          <Key>
+            <PropertyRef Name="placa" />
+          </Key>
+          <Property Name="placa" Type="Int32" Nullable="false" />
+          <Property Name="vin" Type="String" MaxLength="13" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="marca" Type="Int32" Nullable="false" />
+          <Property Name="tipo" Type="Int32" Nullable="false" />
+          <Property Name="color" Type="Int32" Nullable="false" />
+          <Property Name="estado" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="tbColor" Relationship="Self.FK_tbAutomovil_tbColor" FromRole="tbAutomovil" ToRole="tbColor" />
+          <NavigationProperty Name="tbMarca" Relationship="Self.FK_tbAutomovil_tbMarca" FromRole="tbAutomovil" ToRole="tbMarca" />
+          <NavigationProperty Name="tbTipoVehiculo" Relationship="Self.FK_tbAutomovil_tbTipoVehiculo" FromRole="tbAutomovil" ToRole="tbTipoVehiculo" />
+        </EntityType>
+        <EntityType Name="tbColor">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="color" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="tbAutomovil" Relationship="Self.FK_tbAutomovil_tbColor" FromRole="tbColor" ToRole="tbAutomovil" />
+        </EntityType>
+        <EntityType Name="tbMarca">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="marca" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="tbAutomovil" Relationship="Self.FK_tbAutomovil_tbMarca" FromRole="tbMarca" ToRole="tbAutomovil" />
+        </EntityType>
+        <EntityType Name="tbTipoVehiculo">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="tipo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="tbAutomovil" Relationship="Self.FK_tbAutomovil_tbTipoVehiculo" FromRole="tbTipoVehiculo" ToRole="tbAutomovil" />
+        </EntityType>
+        <Association Name="FK_tbAutomovil_tbColor">
+          <End Role="tbColor" Type="Self.tbColor" Multiplicity="1" />
+          <End Role="tbAutomovil" Type="Self.tbAutomovil" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbColor">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tbAutomovil">
+              <PropertyRef Name="color" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbAutomovil_tbMarca">
+          <End Role="tbMarca" Type="Self.tbMarca" Multiplicity="1" />
+          <End Role="tbAutomovil" Type="Self.tbAutomovil" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbMarca">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tbAutomovil">
+              <PropertyRef Name="marca" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbAutomovil_tbTipoVehiculo">
+          <End Role="tbTipoVehiculo" Type="Self.tbTipoVehiculo" Multiplicity="1" />
+          <End Role="tbAutomovil" Type="Self.tbAutomovil" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbTipoVehiculo">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tbAutomovil">
+              <PropertyRef Name="tipo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="dbExamen1POOEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tbAutomovil" EntityType="Self.tbAutomovil" />
+          <EntitySet Name="tbColor" EntityType="Self.tbColor" />
+          <EntitySet Name="tbMarca" EntityType="Self.tbMarca" />
+          <EntitySet Name="tbTipoVehiculo" EntityType="Self.tbTipoVehiculo" />
+          <AssociationSet Name="FK_tbAutomovil_tbColor" Association="Self.FK_tbAutomovil_tbColor">
+            <End Role="tbColor" EntitySet="tbColor" />
+            <End Role="tbAutomovil" EntitySet="tbAutomovil" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbAutomovil_tbMarca" Association="Self.FK_tbAutomovil_tbMarca">
+            <End Role="tbMarca" EntitySet="tbMarca" />
+            <End Role="tbAutomovil" EntitySet="tbAutomovil" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbAutomovil_tbTipoVehiculo" Association="Self.FK_tbAutomovil_tbTipoVehiculo">
+            <End Role="tbTipoVehiculo" EntitySet="tbTipoVehiculo" />
+            <End Role="tbAutomovil" EntitySet="tbAutomovil" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="dbExamen1POOModelStoreContainer" CdmEntityContainer="dbExamen1POOEntities">
+          <EntitySetMapping Name="tbAutomovil">
+            <EntityTypeMapping TypeName="dbExamen1POOModel.tbAutomovil">
+              <MappingFragment StoreEntitySet="tbAutomovil">
+                <ScalarProperty Name="placa" ColumnName="placa" />
+                <ScalarProperty Name="vin" ColumnName="vin" />
+                <ScalarProperty Name="marca" ColumnName="marca" />
+                <ScalarProperty Name="tipo" ColumnName="tipo" />
+                <ScalarProperty Name="color" ColumnName="color" />
+                <ScalarProperty Name="estado" ColumnName="estado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbColor">
+            <EntityTypeMapping TypeName="dbExamen1POOModel.tbColor">
+              <MappingFragment StoreEntitySet="tbColor">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="color" ColumnName="color" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbMarca">
+            <EntityTypeMapping TypeName="dbExamen1POOModel.tbMarca">
+              <MappingFragment StoreEntitySet="tbMarca">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="marca" ColumnName="marca" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbTipoVehiculo">
+            <EntityTypeMapping TypeName="dbExamen1POOModel.tbTipoVehiculo">
+              <MappingFragment StoreEntitySet="tbTipoVehiculo">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="tipo" ColumnName="tipo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

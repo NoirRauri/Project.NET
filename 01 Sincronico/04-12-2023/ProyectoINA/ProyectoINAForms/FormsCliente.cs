@@ -104,7 +104,7 @@ namespace ProyectoINAForms
             catch (ValidationException){
                 MessageBox.Show("Excepcion en la  validacion");
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("Error al guardar");
             }

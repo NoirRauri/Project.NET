@@ -1,4 +1,4 @@
-﻿// La generación de código T4 está habilitada para el modelo 'C:\Users\CRPP13\Desktop\ProyectoINA\DLL\ProjectINAModel.edmx'. 
+﻿// La generación de código T4 está habilitada para el modelo 'C:\Users\laury\Downloads\Portafolio de trabajo Michael Alvarez H\05 .NET\01 Sincronico\04-12-2023\ProyectoINA\DLL\ProjectINAModel.edmx'. 
 // Para habilitar la generación de código heredada, cambie el valor de la propiedad del diseñador 'Estrategia de generación de código'
 // por 'ObjectContext heredado'. Esta propiedad está disponible en la ventana Propiedades cuando se abre
 // el modelo en el diseñador.

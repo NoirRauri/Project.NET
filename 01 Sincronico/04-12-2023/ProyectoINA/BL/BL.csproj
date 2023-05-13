@@ -51,9 +51,7 @@
     <Compile Include="ClientesBL.cs" />
     <Compile Include="Interfaces\IGenericBL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RolesBl.cs" />
     <Compile Include="TipoClientesBL.cs" />
-    <Compile Include="UsuariosBL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DLL\DL.csproj">

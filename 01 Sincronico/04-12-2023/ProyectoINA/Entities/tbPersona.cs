@@ -22,6 +22,5 @@ namespace Entities
         public System.DateTime fechaNac { get; set; }
     
         public virtual tbClientes tbClientes { get; set; }
-        public virtual tbUsuarios tbUsuarios { get; set; }
     }
 }

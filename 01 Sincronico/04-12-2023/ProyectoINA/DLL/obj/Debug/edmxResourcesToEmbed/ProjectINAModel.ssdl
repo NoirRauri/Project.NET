@@ -10,6 +10,34 @@
     <Property Name="foto" Type="image" />
     <Property Name="estado" Type="bit" Nullable="false" />
   </EntityType>
+  <EntityType Name="tbDetalleFacturas">
+    <Key>
+      <PropertyRef Name="idDetalleFactura" />
+    </Key>
+    <Property Name="idDetalleFactura" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idFactura" Type="int" Nullable="false" />
+    <Property Name="idProducto" Type="nchar" MaxLength="12" Nullable="false" />
+    <Property Name="cant" Type="int" Nullable="false" />
+    <Property Name="precio" Type="money" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbFacturas">
+    <Key>
+      <PropertyRef Name="idFactura" />
+    </Key>
+    <Property Name="idFactura" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fecha" Type="date" Nullable="false" />
+    <Property Name="idCliente" Type="nchar" MaxLength="12" Nullable="false" />
+    <Property Name="tipoVenta" Type="nchar" MaxLength="12" Nullable="false" />
+    <Property Name="tipoPago" Type="nchar" MaxLength="12" Nullable="false" />
+    <Property Name="estado" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbJugador">
+    <Key>
+      <PropertyRef Name="cedula" />
+    </Key>
+    <Property Name="cedula" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="nombre" Type="nchar" MaxLength="10" />
+  </EntityType>
   <EntityType Name="tbPersona">
     <Key>
       <PropertyRef Name="cedula" />
@@ -21,13 +49,23 @@
     <Property Name="genero" Type="int" Nullable="false" />
     <Property Name="fechaNac" Type="datetime" Nullable="false" />
   </EntityType>
-  <EntityType Name="tbRoles">
+  <EntityType Name="tbProductos">
     <Key>
-      <PropertyRef Name="rol" />
+      <PropertyRef Name="idProducto" />
     </Key>
-    <Property Name="rol" Type="nchar" MaxLength="12" Nullable="false" />
-    <Property Name="nombreRol" Type="nchar" MaxLength="50" Nullable="false" />
+    <Property Name="idProducto" Type="nchar" MaxLength="12" Nullable="false" />
+    <Property Name="nombre" Type="nchar" MaxLength="50" Nullable="false" />
+    <Property Name="precioVenta" Type="money" />
+    <Property Name="stock" Type="int" />
     <Property Name="estado" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbRegistroJuego">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="cedula" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="tiempo" Type="time" Precision="7" />
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
   </EntityType>
   <EntityType Name="tbTipoClientes">
     <Key>
@@ -37,18 +75,59 @@
     <Property Name="nombre" Type="nchar" MaxLength="50" Nullable="false" />
     <Property Name="estado" Type="bit" Nullable="false" />
   </EntityType>
-  <EntityType Name="tbUsuarios">
+  <EntityType Name="tbTipoPagos">
     <Key>
-      <PropertyRef Name="cedula" />
+      <PropertyRef Name="id" />
     </Key>
-    <Property Name="cedula" Type="nchar" MaxLength="12" Nullable="false" />
+    <Property Name="id" Type="nchar" MaxLength="12" Nullable="false" />
     <Property Name="nombre" Type="nchar" MaxLength="50" Nullable="false" />
-    <Property Name="fechaIngreso" Type="date" Nullable="false" />
-    <Property Name="password" Type="nchar" MaxLength="50" Nullable="false" />
-    <Property Name="rol" Type="nchar" MaxLength="12" Nullable="false" />
     <Property Name="estado" Type="bit" Nullable="false" />
   </EntityType>
-  <Association Name="FK_tbClientes_tbPersona">
+  <EntityType Name="tbTipoVentas">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="nchar" MaxLength="12" Nullable="false" />
+    <Property Name="nombre" Type="nchar" MaxLength="50" Nullable="false" />
+    <Property Name="estado" Type="bit" Nullable="false" />
+  </EntityType>
+  <Association Name="fk_Facturas_DetalleFacturas">
+    <End Role="tbFacturas" Type="Self.tbFacturas" Multiplicity="1" />
+    <End Role="tbDetalleFacturas" Type="Self.tbDetalleFacturas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbFacturas">
+        <PropertyRef Name="idFactura" />
+      </Principal>
+      <Dependent Role="tbDetalleFacturas">
+        <PropertyRef Name="idFactura" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Productos_DetalleFacturas">
+    <End Role="tbProductos" Type="Self.tbProductos" Multiplicity="1" />
+    <End Role="tbDetalleFacturas" Type="Self.tbDetalleFacturas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbProductos">
+        <PropertyRef Name="idProducto" />
+      </Principal>
+      <Dependent Role="tbDetalleFacturas">
+        <PropertyRef Name="idProducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_tbClientes_tbFacturas">
+    <End Role="tbClientes" Type="Self.tbClientes" Multiplicity="1" />
+    <End Role="tbFacturas" Type="Self.tbFacturas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbClientes">
+        <PropertyRef Name="cedula" />
+      </Principal>
+      <Dependent Role="tbFacturas">
+        <PropertyRef Name="idCliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbClientes_tbPersona1">
     <End Role="tbPersona" Type="Self.tbPersona" Multiplicity="1" />
     <End Role="tbClientes" Type="Self.tbClientes" Multiplicity="0..1" />
     <ReferentialConstraint>
@@ -72,37 +151,66 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_tbUsuarios_tbPersona">
-    <End Role="tbPersona" Type="Self.tbPersona" Multiplicity="1" />
-    <End Role="tbUsuarios" Type="Self.tbUsuarios" Multiplicity="0..1" />
+  <Association Name="FK_tbRegistroJuego_tbJugador">
+    <End Role="tbJugador" Type="Self.tbJugador" Multiplicity="1" />
+    <End Role="tbRegistroJuego" Type="Self.tbRegistroJuego" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="tbPersona">
+      <Principal Role="tbJugador">
         <PropertyRef Name="cedula" />
       </Principal>
-      <Dependent Role="tbUsuarios">
+      <Dependent Role="tbRegistroJuego">
         <PropertyRef Name="cedula" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_tbUsuarios_tbRoles1">
-    <End Role="tbRoles" Type="Self.tbRoles" Multiplicity="1" />
-    <End Role="tbUsuarios" Type="Self.tbUsuarios" Multiplicity="*" />
+  <Association Name="fk_tbTipoPago_tbFacturas">
+    <End Role="tbTipoPagos" Type="Self.tbTipoPagos" Multiplicity="1" />
+    <End Role="tbFacturas" Type="Self.tbFacturas" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="tbRoles">
-        <PropertyRef Name="rol" />
+      <Principal Role="tbTipoPagos">
+        <PropertyRef Name="id" />
       </Principal>
-      <Dependent Role="tbUsuarios">
-        <PropertyRef Name="rol" />
+      <Dependent Role="tbFacturas">
+        <PropertyRef Name="tipoPago" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_tbTipoVenta_tbFacturas">
+    <End Role="tbTipoVentas" Type="Self.tbTipoVentas" Multiplicity="1" />
+    <End Role="tbFacturas" Type="Self.tbFacturas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbTipoVentas">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tbFacturas">
+        <PropertyRef Name="tipoVenta" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
   <EntityContainer Name="dbProyectoINAModelStoreContainer">
     <EntitySet Name="tbClientes" EntityType="Self.tbClientes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbDetalleFacturas" EntityType="Self.tbDetalleFacturas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbFacturas" EntityType="Self.tbFacturas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbJugador" EntityType="Self.tbJugador" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tbPersona" EntityType="Self.tbPersona" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="tbRoles" EntityType="Self.tbRoles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbProductos" EntityType="Self.tbProductos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbRegistroJuego" EntityType="Self.tbRegistroJuego" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="tbTipoClientes" EntityType="Self.tbTipoClientes" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="tbUsuarios" EntityType="Self.tbUsuarios" Schema="dbo" store:Type="Tables" />
-    <AssociationSet Name="FK_tbClientes_tbPersona" Association="Self.FK_tbClientes_tbPersona">
+    <EntitySet Name="tbTipoPagos" EntityType="Self.tbTipoPagos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbTipoVentas" EntityType="Self.tbTipoVentas" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="fk_Facturas_DetalleFacturas" Association="Self.fk_Facturas_DetalleFacturas">
+      <End Role="tbFacturas" EntitySet="tbFacturas" />
+      <End Role="tbDetalleFacturas" EntitySet="tbDetalleFacturas" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Productos_DetalleFacturas" Association="Self.fk_Productos_DetalleFacturas">
+      <End Role="tbProductos" EntitySet="tbProductos" />
+      <End Role="tbDetalleFacturas" EntitySet="tbDetalleFacturas" />
+    </AssociationSet>
+    <AssociationSet Name="fk_tbClientes_tbFacturas" Association="Self.fk_tbClientes_tbFacturas">
+      <End Role="tbClientes" EntitySet="tbClientes" />
+      <End Role="tbFacturas" EntitySet="tbFacturas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbClientes_tbPersona1" Association="Self.FK_tbClientes_tbPersona1">
       <End Role="tbPersona" EntitySet="tbPersona" />
       <End Role="tbClientes" EntitySet="tbClientes" />
     </AssociationSet>
@@ -110,13 +218,17 @@
       <End Role="tbTipoClientes" EntitySet="tbTipoClientes" />
       <End Role="tbClientes" EntitySet="tbClientes" />
     </AssociationSet>
-    <AssociationSet Name="FK_tbUsuarios_tbPersona" Association="Self.FK_tbUsuarios_tbPersona">
-      <End Role="tbPersona" EntitySet="tbPersona" />
-      <End Role="tbUsuarios" EntitySet="tbUsuarios" />
+    <AssociationSet Name="FK_tbRegistroJuego_tbJugador" Association="Self.FK_tbRegistroJuego_tbJugador">
+      <End Role="tbJugador" EntitySet="tbJugador" />
+      <End Role="tbRegistroJuego" EntitySet="tbRegistroJuego" />
     </AssociationSet>
-    <AssociationSet Name="FK_tbUsuarios_tbRoles1" Association="Self.FK_tbUsuarios_tbRoles1">
-      <End Role="tbRoles" EntitySet="tbRoles" />
-      <End Role="tbUsuarios" EntitySet="tbUsuarios" />
+    <AssociationSet Name="fk_tbTipoPago_tbFacturas" Association="Self.fk_tbTipoPago_tbFacturas">
+      <End Role="tbTipoPagos" EntitySet="tbTipoPagos" />
+      <End Role="tbFacturas" EntitySet="tbFacturas" />
+    </AssociationSet>
+    <AssociationSet Name="fk_tbTipoVenta_tbFacturas" Association="Self.fk_tbTipoVenta_tbFacturas">
+      <End Role="tbTipoVentas" EntitySet="tbTipoVentas" />
+      <End Role="tbFacturas" EntitySet="tbFacturas" />
     </AssociationSet>
   </EntityContainer>
 </Schema>

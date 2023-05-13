@@ -14,12 +14,20 @@ namespace Entities
     
     public partial class tbClientes
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public tbClientes()
+        {
+            this.tbFacturas = new HashSet<tbFacturas>();
+        }
+    
         public string cedula { get; set; }
         public int tipoCliente { get; set; }
         public int descMax { get; set; }
         public byte[] foto { get; set; }
         public bool estado { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<tbFacturas> tbFacturas { get; set; }
         public virtual tbPersona tbPersona { get; set; }
         public virtual tbTipoClientes tbTipoClientes { get; set; }
     }

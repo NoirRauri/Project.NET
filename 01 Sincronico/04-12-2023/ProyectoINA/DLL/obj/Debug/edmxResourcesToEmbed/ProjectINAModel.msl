@@ -12,6 +12,37 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="tbDetalleFacturas">
+      <EntityTypeMapping TypeName="dbProyectoINAModel.tbDetalleFacturas">
+        <MappingFragment StoreEntitySet="tbDetalleFacturas">
+          <ScalarProperty Name="precio" ColumnName="precio" />
+          <ScalarProperty Name="cant" ColumnName="cant" />
+          <ScalarProperty Name="idProducto" ColumnName="idProducto" />
+          <ScalarProperty Name="idFactura" ColumnName="idFactura" />
+          <ScalarProperty Name="idDetalleFactura" ColumnName="idDetalleFactura" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbFacturas">
+      <EntityTypeMapping TypeName="dbProyectoINAModel.tbFacturas">
+        <MappingFragment StoreEntitySet="tbFacturas">
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="tipoPago" ColumnName="tipoPago" />
+          <ScalarProperty Name="tipoVenta" ColumnName="tipoVenta" />
+          <ScalarProperty Name="idCliente" ColumnName="idCliente" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+          <ScalarProperty Name="idFactura" ColumnName="idFactura" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbJugador">
+      <EntityTypeMapping TypeName="dbProyectoINAModel.tbJugador">
+        <MappingFragment StoreEntitySet="tbJugador">
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="cedula" ColumnName="cedula" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="tbPersona">
       <EntityTypeMapping TypeName="dbProyectoINAModel.tbPersona">
         <MappingFragment StoreEntitySet="tbPersona">
@@ -24,12 +55,23 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="tbRoles">
-      <EntityTypeMapping TypeName="dbProyectoINAModel.tbRoles">
-        <MappingFragment StoreEntitySet="tbRoles">
+    <EntitySetMapping Name="tbProductos">
+      <EntityTypeMapping TypeName="dbProyectoINAModel.tbProductos">
+        <MappingFragment StoreEntitySet="tbProductos">
           <ScalarProperty Name="estado" ColumnName="estado" />
-          <ScalarProperty Name="nombreRol" ColumnName="nombreRol" />
-          <ScalarProperty Name="rol" ColumnName="rol" />
+          <ScalarProperty Name="stock" ColumnName="stock" />
+          <ScalarProperty Name="precioVenta" ColumnName="precioVenta" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="idProducto" ColumnName="idProducto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbRegistroJuego">
+      <EntityTypeMapping TypeName="dbProyectoINAModel.tbRegistroJuego">
+        <MappingFragment StoreEntitySet="tbRegistroJuego">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="tiempo" ColumnName="tiempo" />
+          <ScalarProperty Name="cedula" ColumnName="cedula" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -42,15 +84,21 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="tbUsuarios">
-      <EntityTypeMapping TypeName="dbProyectoINAModel.tbUsuarios">
-        <MappingFragment StoreEntitySet="tbUsuarios">
+    <EntitySetMapping Name="tbTipoPagos">
+      <EntityTypeMapping TypeName="dbProyectoINAModel.tbTipoPagos">
+        <MappingFragment StoreEntitySet="tbTipoPagos">
           <ScalarProperty Name="estado" ColumnName="estado" />
-          <ScalarProperty Name="rol" ColumnName="rol" />
-          <ScalarProperty Name="password" ColumnName="password" />
-          <ScalarProperty Name="fechaIngreso" ColumnName="fechaIngreso" />
           <ScalarProperty Name="nombre" ColumnName="nombre" />
-          <ScalarProperty Name="cedula" ColumnName="cedula" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbTipoVentas">
+      <EntityTypeMapping TypeName="dbProyectoINAModel.tbTipoVentas">
+        <MappingFragment StoreEntitySet="tbTipoVentas">
+          <ScalarProperty Name="estado" ColumnName="estado" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="id" ColumnName="id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

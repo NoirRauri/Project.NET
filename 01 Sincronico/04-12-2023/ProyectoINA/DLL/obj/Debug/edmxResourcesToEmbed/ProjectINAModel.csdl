@@ -2,11 +2,20 @@
 <Schema Namespace="dbProyectoINAModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
   <EntityContainer Name="dbProyectoINAEntities1" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="tbClientes" EntityType="dbProyectoINAModel.tbClientes" />
+    <EntitySet Name="tbDetalleFacturas" EntityType="dbProyectoINAModel.tbDetalleFacturas" />
+    <EntitySet Name="tbFacturas" EntityType="dbProyectoINAModel.tbFacturas" />
+    <EntitySet Name="tbJugador" EntityType="dbProyectoINAModel.tbJugador" />
     <EntitySet Name="tbPersona" EntityType="dbProyectoINAModel.tbPersona" />
-    <EntitySet Name="tbRoles" EntityType="dbProyectoINAModel.tbRoles" />
+    <EntitySet Name="tbProductos" EntityType="dbProyectoINAModel.tbProductos" />
+    <EntitySet Name="tbRegistroJuego" EntityType="dbProyectoINAModel.tbRegistroJuego" />
     <EntitySet Name="tbTipoClientes" EntityType="dbProyectoINAModel.tbTipoClientes" />
-    <EntitySet Name="tbUsuarios" EntityType="dbProyectoINAModel.tbUsuarios" />
-    <AssociationSet Name="FK_tbClientes_tbPersona" Association="dbProyectoINAModel.FK_tbClientes_tbPersona">
+    <EntitySet Name="tbTipoPagos" EntityType="dbProyectoINAModel.tbTipoPagos" />
+    <EntitySet Name="tbTipoVentas" EntityType="dbProyectoINAModel.tbTipoVentas" />
+    <AssociationSet Name="fk_tbClientes_tbFacturas" Association="dbProyectoINAModel.fk_tbClientes_tbFacturas">
+      <End Role="tbClientes" EntitySet="tbClientes" />
+      <End Role="tbFacturas" EntitySet="tbFacturas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbClientes_tbPersona1" Association="dbProyectoINAModel.FK_tbClientes_tbPersona1">
       <End Role="tbPersona" EntitySet="tbPersona" />
       <End Role="tbClientes" EntitySet="tbClientes" />
     </AssociationSet>
@@ -14,13 +23,25 @@
       <End Role="tbTipoClientes" EntitySet="tbTipoClientes" />
       <End Role="tbClientes" EntitySet="tbClientes" />
     </AssociationSet>
-    <AssociationSet Name="FK_tbUsuarios_tbPersona" Association="dbProyectoINAModel.FK_tbUsuarios_tbPersona">
-      <End Role="tbPersona" EntitySet="tbPersona" />
-      <End Role="tbUsuarios" EntitySet="tbUsuarios" />
+    <AssociationSet Name="fk_Facturas_DetalleFacturas" Association="dbProyectoINAModel.fk_Facturas_DetalleFacturas">
+      <End Role="tbFacturas" EntitySet="tbFacturas" />
+      <End Role="tbDetalleFacturas" EntitySet="tbDetalleFacturas" />
     </AssociationSet>
-    <AssociationSet Name="FK_tbUsuarios_tbRoles1" Association="dbProyectoINAModel.FK_tbUsuarios_tbRoles1">
-      <End Role="tbRoles" EntitySet="tbRoles" />
-      <End Role="tbUsuarios" EntitySet="tbUsuarios" />
+    <AssociationSet Name="fk_Productos_DetalleFacturas" Association="dbProyectoINAModel.fk_Productos_DetalleFacturas">
+      <End Role="tbProductos" EntitySet="tbProductos" />
+      <End Role="tbDetalleFacturas" EntitySet="tbDetalleFacturas" />
+    </AssociationSet>
+    <AssociationSet Name="fk_tbTipoPago_tbFacturas" Association="dbProyectoINAModel.fk_tbTipoPago_tbFacturas">
+      <End Role="tbTipoPagos" EntitySet="tbTipoPagos" />
+      <End Role="tbFacturas" EntitySet="tbFacturas" />
+    </AssociationSet>
+    <AssociationSet Name="fk_tbTipoVenta_tbFacturas" Association="dbProyectoINAModel.fk_tbTipoVenta_tbFacturas">
+      <End Role="tbTipoVentas" EntitySet="tbTipoVentas" />
+      <End Role="tbFacturas" EntitySet="tbFacturas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbRegistroJuego_tbJugador" Association="dbProyectoINAModel.FK_tbRegistroJuego_tbJugador">
+      <End Role="tbJugador" EntitySet="tbJugador" />
+      <End Role="tbRegistroJuego" EntitySet="tbRegistroJuego" />
     </AssociationSet>
   </EntityContainer>
   <EntityType Name="tbClientes">
@@ -32,8 +53,44 @@
     <Property Name="descMax" Type="Int32" Nullable="false" />
     <Property Name="foto" Type="Binary" MaxLength="Max" FixedLength="false" />
     <Property Name="estado" Type="Boolean" Nullable="false" />
-    <NavigationProperty Name="tbPersona" Relationship="dbProyectoINAModel.FK_tbClientes_tbPersona" FromRole="tbClientes" ToRole="tbPersona" />
+    <NavigationProperty Name="tbFacturas" Relationship="dbProyectoINAModel.fk_tbClientes_tbFacturas" FromRole="tbClientes" ToRole="tbFacturas" />
+    <NavigationProperty Name="tbPersona" Relationship="dbProyectoINAModel.FK_tbClientes_tbPersona1" FromRole="tbClientes" ToRole="tbPersona" />
     <NavigationProperty Name="tbTipoClientes" Relationship="dbProyectoINAModel.FK_tbClientes_tbTipoClientes" FromRole="tbClientes" ToRole="tbTipoClientes" />
+  </EntityType>
+  <EntityType Name="tbDetalleFacturas">
+    <Key>
+      <PropertyRef Name="idDetalleFactura" />
+    </Key>
+    <Property Name="idDetalleFactura" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idFactura" Type="Int32" Nullable="false" />
+    <Property Name="idProducto" Type="String" Nullable="false" MaxLength="12" FixedLength="true" Unicode="true" />
+    <Property Name="cant" Type="Int32" Nullable="false" />
+    <Property Name="precio" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <NavigationProperty Name="tbFacturas" Relationship="dbProyectoINAModel.fk_Facturas_DetalleFacturas" FromRole="tbDetalleFacturas" ToRole="tbFacturas" />
+    <NavigationProperty Name="tbProductos" Relationship="dbProyectoINAModel.fk_Productos_DetalleFacturas" FromRole="tbDetalleFacturas" ToRole="tbProductos" />
+  </EntityType>
+  <EntityType Name="tbFacturas">
+    <Key>
+      <PropertyRef Name="idFactura" />
+    </Key>
+    <Property Name="idFactura" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fecha" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="idCliente" Type="String" Nullable="false" MaxLength="12" FixedLength="true" Unicode="true" />
+    <Property Name="tipoVenta" Type="String" Nullable="false" MaxLength="12" FixedLength="true" Unicode="true" />
+    <Property Name="tipoPago" Type="String" Nullable="false" MaxLength="12" FixedLength="true" Unicode="true" />
+    <Property Name="estado" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="tbClientes" Relationship="dbProyectoINAModel.fk_tbClientes_tbFacturas" FromRole="tbFacturas" ToRole="tbClientes" />
+    <NavigationProperty Name="tbDetalleFacturas" Relationship="dbProyectoINAModel.fk_Facturas_DetalleFacturas" FromRole="tbFacturas" ToRole="tbDetalleFacturas" />
+    <NavigationProperty Name="tbTipoPagos" Relationship="dbProyectoINAModel.fk_tbTipoPago_tbFacturas" FromRole="tbFacturas" ToRole="tbTipoPagos" />
+    <NavigationProperty Name="tbTipoVentas" Relationship="dbProyectoINAModel.fk_tbTipoVenta_tbFacturas" FromRole="tbFacturas" ToRole="tbTipoVentas" />
+  </EntityType>
+  <EntityType Name="tbJugador">
+    <Key>
+      <PropertyRef Name="cedula" />
+    </Key>
+    <Property Name="cedula" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="nombre" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="tbRegistroJuego" Relationship="dbProyectoINAModel.FK_tbRegistroJuego_tbJugador" FromRole="tbJugador" ToRole="tbRegistroJuego" />
   </EntityType>
   <EntityType Name="tbPersona">
     <Key>
@@ -45,17 +102,27 @@
     <Property Name="apellido2" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="true" />
     <Property Name="genero" Type="Int32" Nullable="false" />
     <Property Name="fechaNac" Type="DateTime" Nullable="false" Precision="3" />
-    <NavigationProperty Name="tbClientes" Relationship="dbProyectoINAModel.FK_tbClientes_tbPersona" FromRole="tbPersona" ToRole="tbClientes" />
-    <NavigationProperty Name="tbUsuarios" Relationship="dbProyectoINAModel.FK_tbUsuarios_tbPersona" FromRole="tbPersona" ToRole="tbUsuarios" />
+    <NavigationProperty Name="tbClientes" Relationship="dbProyectoINAModel.FK_tbClientes_tbPersona1" FromRole="tbPersona" ToRole="tbClientes" />
   </EntityType>
-  <EntityType Name="tbRoles">
+  <EntityType Name="tbProductos">
     <Key>
-      <PropertyRef Name="rol" />
+      <PropertyRef Name="idProducto" />
     </Key>
-    <Property Name="rol" Type="String" Nullable="false" MaxLength="12" FixedLength="true" Unicode="true" />
-    <Property Name="nombreRol" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="idProducto" Type="String" Nullable="false" MaxLength="12" FixedLength="true" Unicode="true" />
+    <Property Name="nombre" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="precioVenta" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="stock" Type="Int32" />
     <Property Name="estado" Type="Boolean" Nullable="false" />
-    <NavigationProperty Name="tbUsuarios" Relationship="dbProyectoINAModel.FK_tbUsuarios_tbRoles1" FromRole="tbRoles" ToRole="tbUsuarios" />
+    <NavigationProperty Name="tbDetalleFacturas" Relationship="dbProyectoINAModel.fk_Productos_DetalleFacturas" FromRole="tbProductos" ToRole="tbDetalleFacturas" />
+  </EntityType>
+  <EntityType Name="tbRegistroJuego">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="cedula" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="tiempo" Type="Time" Precision="7" />
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="tbJugador" Relationship="dbProyectoINAModel.FK_tbRegistroJuego_tbJugador" FromRole="tbRegistroJuego" ToRole="tbJugador" />
   </EntityType>
   <EntityType Name="tbTipoClientes">
     <Key>
@@ -66,20 +133,37 @@
     <Property Name="estado" Type="Boolean" Nullable="false" />
     <NavigationProperty Name="tbClientes" Relationship="dbProyectoINAModel.FK_tbClientes_tbTipoClientes" FromRole="tbTipoClientes" ToRole="tbClientes" />
   </EntityType>
-  <EntityType Name="tbUsuarios">
+  <EntityType Name="tbTipoPagos">
     <Key>
-      <PropertyRef Name="cedula" />
+      <PropertyRef Name="id" />
     </Key>
-    <Property Name="cedula" Type="String" Nullable="false" MaxLength="12" FixedLength="true" Unicode="true" />
+    <Property Name="id" Type="String" Nullable="false" MaxLength="12" FixedLength="true" Unicode="true" />
     <Property Name="nombre" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="true" />
-    <Property Name="fechaIngreso" Type="DateTime" Nullable="false" Precision="0" />
-    <Property Name="password" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="true" />
-    <Property Name="rol" Type="String" Nullable="false" MaxLength="12" FixedLength="true" Unicode="true" />
     <Property Name="estado" Type="Boolean" Nullable="false" />
-    <NavigationProperty Name="tbPersona" Relationship="dbProyectoINAModel.FK_tbUsuarios_tbPersona" FromRole="tbUsuarios" ToRole="tbPersona" />
-    <NavigationProperty Name="tbRoles" Relationship="dbProyectoINAModel.FK_tbUsuarios_tbRoles1" FromRole="tbUsuarios" ToRole="tbRoles" />
+    <NavigationProperty Name="tbFacturas" Relationship="dbProyectoINAModel.fk_tbTipoPago_tbFacturas" FromRole="tbTipoPagos" ToRole="tbFacturas" />
   </EntityType>
-  <Association Name="FK_tbClientes_tbPersona">
+  <EntityType Name="tbTipoVentas">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="String" Nullable="false" MaxLength="12" FixedLength="true" Unicode="true" />
+    <Property Name="nombre" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="estado" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="tbFacturas" Relationship="dbProyectoINAModel.fk_tbTipoVenta_tbFacturas" FromRole="tbTipoVentas" ToRole="tbFacturas" />
+  </EntityType>
+  <Association Name="fk_tbClientes_tbFacturas">
+    <End Type="dbProyectoINAModel.tbClientes" Role="tbClientes" Multiplicity="1" />
+    <End Type="dbProyectoINAModel.tbFacturas" Role="tbFacturas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbClientes">
+        <PropertyRef Name="cedula" />
+      </Principal>
+      <Dependent Role="tbFacturas">
+        <PropertyRef Name="idCliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbClientes_tbPersona1">
     <End Type="dbProyectoINAModel.tbPersona" Role="tbPersona" Multiplicity="1" />
     <End Type="dbProyectoINAModel.tbClientes" Role="tbClientes" Multiplicity="0..1" />
     <ReferentialConstraint>
@@ -103,27 +187,63 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_tbUsuarios_tbPersona">
-    <End Type="dbProyectoINAModel.tbPersona" Role="tbPersona" Multiplicity="1" />
-    <End Type="dbProyectoINAModel.tbUsuarios" Role="tbUsuarios" Multiplicity="0..1" />
+  <Association Name="fk_Facturas_DetalleFacturas">
+    <End Type="dbProyectoINAModel.tbFacturas" Role="tbFacturas" Multiplicity="1" />
+    <End Type="dbProyectoINAModel.tbDetalleFacturas" Role="tbDetalleFacturas" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="tbPersona">
-        <PropertyRef Name="cedula" />
+      <Principal Role="tbFacturas">
+        <PropertyRef Name="idFactura" />
       </Principal>
-      <Dependent Role="tbUsuarios">
-        <PropertyRef Name="cedula" />
+      <Dependent Role="tbDetalleFacturas">
+        <PropertyRef Name="idFactura" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_tbUsuarios_tbRoles1">
-    <End Type="dbProyectoINAModel.tbRoles" Role="tbRoles" Multiplicity="1" />
-    <End Type="dbProyectoINAModel.tbUsuarios" Role="tbUsuarios" Multiplicity="*" />
+  <Association Name="fk_Productos_DetalleFacturas">
+    <End Type="dbProyectoINAModel.tbProductos" Role="tbProductos" Multiplicity="1" />
+    <End Type="dbProyectoINAModel.tbDetalleFacturas" Role="tbDetalleFacturas" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="tbRoles">
-        <PropertyRef Name="rol" />
+      <Principal Role="tbProductos">
+        <PropertyRef Name="idProducto" />
       </Principal>
-      <Dependent Role="tbUsuarios">
-        <PropertyRef Name="rol" />
+      <Dependent Role="tbDetalleFacturas">
+        <PropertyRef Name="idProducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_tbTipoPago_tbFacturas">
+    <End Type="dbProyectoINAModel.tbTipoPagos" Role="tbTipoPagos" Multiplicity="1" />
+    <End Type="dbProyectoINAModel.tbFacturas" Role="tbFacturas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbTipoPagos">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tbFacturas">
+        <PropertyRef Name="tipoPago" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_tbTipoVenta_tbFacturas">
+    <End Type="dbProyectoINAModel.tbTipoVentas" Role="tbTipoVentas" Multiplicity="1" />
+    <End Type="dbProyectoINAModel.tbFacturas" Role="tbFacturas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbTipoVentas">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tbFacturas">
+        <PropertyRef Name="tipoVenta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbRegistroJuego_tbJugador">
+    <End Type="dbProyectoINAModel.tbJugador" Role="tbJugador" Multiplicity="1" />
+    <End Type="dbProyectoINAModel.tbRegistroJuego" Role="tbRegistroJuego" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbJugador">
+        <PropertyRef Name="cedula" />
+      </Principal>
+      <Dependent Role="tbRegistroJuego">
+        <PropertyRef Name="cedula" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

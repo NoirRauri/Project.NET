@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dbExamen1POOModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tbAutomovil">
+    <Key>
+      <PropertyRef Name="placa" />
+    </Key>
+    <Property Name="placa" Type="int" Nullable="false" />
+    <Property Name="vin" Type="varchar" MaxLength="13" Nullable="false" />
+    <Property Name="marca" Type="int" Nullable="false" />
+    <Property Name="tipo" Type="int" Nullable="false" />
+    <Property Name="color" Type="int" Nullable="false" />
+    <Property Name="estado" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbColor">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="color" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbMarca">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="marca" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbTipoVehiculo">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="tipo" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_tbAutomovil_tbColor">
+    <End Role="tbColor" Type="Self.tbColor" Multiplicity="1" />
+    <End Role="tbAutomovil" Type="Self.tbAutomovil" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbColor">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tbAutomovil">
+        <PropertyRef Name="color" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbAutomovil_tbMarca">
+    <End Role="tbMarca" Type="Self.tbMarca" Multiplicity="1" />
+    <End Role="tbAutomovil" Type="Self.tbAutomovil" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbMarca">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tbAutomovil">
+        <PropertyRef Name="marca" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbAutomovil_tbTipoVehiculo">
+    <End Role="tbTipoVehiculo" Type="Self.tbTipoVehiculo" Multiplicity="1" />
+    <End Role="tbAutomovil" Type="Self.tbAutomovil" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbTipoVehiculo">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tbAutomovil">
+        <PropertyRef Name="tipo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="dbExamen1POOModelStoreContainer">
+    <EntitySet Name="tbAutomovil" EntityType="Self.tbAutomovil" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbColor" EntityType="Self.tbColor" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbMarca" EntityType="Self.tbMarca" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbTipoVehiculo" EntityType="Self.tbTipoVehiculo" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_tbAutomovil_tbColor" Association="Self.FK_tbAutomovil_tbColor">
+      <End Role="tbColor" EntitySet="tbColor" />
+      <End Role="tbAutomovil" EntitySet="tbAutomovil" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbAutomovil_tbMarca" Association="Self.FK_tbAutomovil_tbMarca">
+      <End Role="tbMarca" EntitySet="tbMarca" />
+      <End Role="tbAutomovil" EntitySet="tbAutomovil" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbAutomovil_tbTipoVehiculo" Association="Self.FK_tbAutomovil_tbTipoVehiculo">
+      <End Role="tbTipoVehiculo" EntitySet="tbTipoVehiculo" />
+      <End Role="tbAutomovil" EntitySet="tbAutomovil" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
