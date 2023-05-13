@@ -24,71 +24,126 @@ namespace Data
         {
             try
             {
-                // instacias
-                TbDetalleFactura dtf = new TbDetalleFactura();
-                TbProducto producto = new TbProducto();
-                // bandera para actualizar el producto
-                bool actualice;
+                TbProducto producto;
+                var detallesConProductos = await _context.TbDetalleFacturas
+                                            .Include("IdProductoNavigation")
+                                            .Where(df => df.IdFactura == entity.IdFactura)
+                                            .ToListAsync();
 
-                // Modifica y/o agrega detalles a Factura y Modifca el Stock en Productos 
                 foreach (var detalle in entity.TbDetalleFacturas)
                 {
-                    actualice = false; // actualiza si cambia a true
-
+                    var actualice = false;
                     producto = await _context.TbProductos
-                        .Where(x => x.IdProducto == detalle.IdProducto && x.Estado == true).SingleOrDefaultAsync();
+                        .Where(x => x.IdProducto == detalle.IdProducto && x.Estado == true)
+                        .SingleOrDefaultAsync();
 
-                    if (detalle.IdDetalleFactura!=0) // si el idDetalleFactura es 0 es nuevo
+                    var detalleExistente = detallesConProductos.FirstOrDefault(df => df.IdDetalleFactura == detalle.IdDetalleFactura);
+
+                    if (detalleExistente != null)
                     {
-                        // instacia el detalle factura de la BD por el ID
-                        dtf = await _context.TbDetalleFacturas
-                            .Where(x => x.IdDetalleFactura == detalle.IdDetalleFactura && x.Estado == true)
-                            .AsNoTracking().SingleOrDefaultAsync(); // para que ni trakee los nulls
+                        if (detalleExistente.Cant > detalle.Cant)
+                        {
+                            producto.Stock += detalleExistente.Cant - detalle.Cant;
+                            actualice = true;
+                        }
+                        else if (detalleExistente.Cant < detalle.Cant)
+                        {
+                            producto.Stock -= detalle.Cant - detalleExistente.Cant;
+                            actualice = true;
+                        }
 
-                        /* compara los datos de la BD con los datos del DTO en cada detalle
-                           si es mayor se le suma al stock, si es menor le resta, de lo contrario queda igual */
-                        if (dtf.Cant > detalle.Cant)
-                        {
-                            producto.Stock = producto.Stock + (dtf.Cant - detalle.Cant);
-                            actualice = true;
-                        }
-                        else if (dtf.Cant < detalle.Cant)
-                        {
-                            producto.Stock = producto.Stock - (detalle.Cant - dtf.Cant);
-                            actualice = true;
-                        }
-                        // modifica el datalleFactura en el contexto
                         _context.Entry(detalle).State = EntityState.Modified;
-
                     }
-                    else // creacion del nuevo detalle
+                    else
                     {
                         _context.Entry(detalle).State = EntityState.Added;
-                        producto.Stock = producto.Stock - detalle.Cant;
+                        producto.Stock -= detalle.Cant;
                         actualice = true;
                     }
-                    if (actualice) // modifica el producto en el contexto
+
+                    if (actualice)
                     {
                         _context.Entry(producto).State = EntityState.Modified;
                     }
                 }
-                // instacia la lista de detalles del ID de la factura
-                var DetalleFacturas = await _context.TbDetalleFacturas.Where(x=>x.IdFactura==entity.IdFactura).AsNoTracking().ToListAsync();
-                // Compara los detalles de la factura de la BD con el DTO,
-                // si no lo encuentra lo elimina en el contexto para actualizar los cambios en la BD
-                foreach (var item in DetalleFacturas)
-                {
-                    // instacia el Id Producto para modificar si el detalla se elimina
-                    producto = await _context.TbProductos
-                        .Where(x => x.IdProducto == item.IdProducto && x.Estado == true).SingleOrDefaultAsync();
-                    // verifica si existe el detallefactura
-                    if (entity.TbDetalleFacturas.Where(x => x.IdDetalleFactura == item.IdDetalleFactura).FirstOrDefault() == null)
-                    {
-                        producto.Stock = producto.Stock + item.Cant;
-                        _context.Entry(producto).State = EntityState.Modified;
-                        _context.Entry(item).State = EntityState.Deleted;
-                    }
 
+                //// instacias
+                //TbDetalleFactura dtf = new TbDetalleFactura();
+                //TbProducto producto = new TbProducto();
+                //// bandera para actualizar el producto
+                //bool actualice;
+
+                //// Modifica y/o agrega detalles a Factura y Modifca el Stock en Productos 
+                //foreach (var detalle in entity.TbDetalleFacturas)
+                //{
+                //    actualice = false; // actualiza si cambia a true
+
+                //    producto = await _context.TbProductos
+                //        .Where(x => x.IdProducto == detalle.IdProducto && x.Estado == true).SingleOrDefaultAsync();
+
+                //    if (detalle.IdDetalleFactura!=0) // si el idDetalleFactura es 0 es nuevo
+                //    {
+                //        // instacia el detalle factura de la BD por el ID
+                //        dtf = await _context.TbDetalleFacturas
+                //            .Where(x => x.IdDetalleFactura == detalle.IdDetalleFactura && x.Estado == true)
+                //            .AsNoTracking().SingleOrDefaultAsync(); // para que ni trakee los nulls
+
+                //        /* compara los datos de la BD con los datos del DTO en cada detalle
+                //           si es mayor se le suma al stock, si es menor le resta, de lo contrario queda igual */
+                //        if (dtf.Cant > detalle.Cant)
+                //        {
+                //            producto.Stock = producto.Stock + (dtf.Cant - detalle.Cant);
+                //            actualice = true;
+                //        }
+                //        else if (dtf.Cant < detalle.Cant)
+                //        {
+                //            producto.Stock = producto.Stock - (detalle.Cant - dtf.Cant);
+                //            actualice = true;
+                //        }
+                //        // modifica el datalleFactura en el contexto
+                //        _context.Entry(detalle).State = EntityState.Modified;
+
+                //    }
+                //    else // creacion del nuevo detalle
+                //    {
+                //        _context.Entry(detalle).State = EntityState.Added;
+                //        producto.Stock = producto.Stock - detalle.Cant;
+                //        actualice = true;
+                //    }
+                //    if (actualice) // modifica el producto en el contexto
+                //    {
+                //        _context.Entry(producto).State = EntityState.Modified;
+                //    }
+                //}
+
+                //// instacia la lista de detalles del ID de la factura
+                //var DetalleFacturas = await _context.TbDetalleFacturas.Where(x=>x.IdFactura==entity.IdFactura).AsNoTracking().ToListAsync();
+                //// Compara los detalles de la factura de la BD con el DTO,
+                //// si no lo encuentra lo elimina en el contexto para actualizar los cambios en la BD
+                //foreach (var item in DetalleFacturas)
+                //{
+                //    // instacia el Id Producto para modificar si el detalla se elimina
+                //    producto = await _context.TbProductos
+                //        .Where(x => x.IdProducto == item.IdProducto && x.Estado == true).SingleOrDefaultAsync();
+                //    // verifica si existe el detallefactura
+                //    if (entity.TbDetalleFacturas.Where(x => x.IdDetalleFactura == item.IdDetalleFactura).FirstOrDefault() == null)
+                //    {
+                //        producto.Stock = producto.Stock + item.Cant;
+                //        _context.Entry(producto).State = EntityState.Modified;
+                //        _context.Entry(item).State = EntityState.Deleted;
+                //    }
+
+                //}
+
+                foreach (var detalle in detallesConProductos)
+                {
+                    producto = detalle.IdProductoNavigation;
+                    if (entity.TbDetalleFacturas.FirstOrDefault(x => x.IdDetalleFactura == detalle.IdDetalleFactura) == null)
+                    {
+                        producto.Stock += detalle.Cant;
+                        _context.Entry(producto).State = EntityState.Modified;
+                        _context.Entry(detalle).State = EntityState.Deleted;
+                    }
                 }
                 // modifica en el contexto la factura y manda a guarda todos los cambios
                 _context.Entry(entity).State = EntityState.Modified;
@@ -99,6 +154,8 @@ namespace Data
             {
                 return false;
             }
+
+
         }
 
         public async Task<bool> eliminar(TbFactura entity)
