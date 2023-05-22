@@ -95,7 +95,7 @@ namespace InaApi2.Controllers
             try
             {
                 // Verificacion de datos 
-                if (validarDatos(facturaDTO))
+                if (!validarDatos(facturaDTO))
                 {
                     return NotFound("Los datos estan incompletos");
                 }
@@ -147,10 +147,10 @@ namespace InaApi2.Controllers
                     }
                     producto.Stock = producto.Stock - list.Cant;
                     await _IProductoService.actualizar(producto);
-                    if (facturaDTO.TbDetalleFacturas.Where(x=>x.IdDetalleFactura==list.IdDetalleFactura).Count()>1)
-                    {
-                        return NotFound("El stock del prodcuto es mayor al que hay");
-                    }
+                    //if (facturaDTO.TbDetalleFacturas.Where(x=>x.IdDetalleFactura==list.IdDetalleFactura).Count()>1)
+                    //{
+                    //    return NotFound("El stock del prodcuto es mayor al que hay");
+                    //}
                 }
 
                 await _IFacturaService.guardar(factura);
@@ -243,7 +243,11 @@ namespace InaApi2.Controllers
                     {
                         return NotFound("El stock del prodcuto es mayor al que hay");
                     }
-                    
+                    if (facturaDTO.TbDetalleFacturas.Where(x => x.IdDetalleFactura == list.IdDetalleFactura).Count() > 1)
+                    {
+                        return NotFound("El stock del prodcuto es mayor al que hay");
+                    }
+
                 }
 
                 factura = _mapper.Map<FacturaDTO, TbFactura>(facturaDTO, factura);

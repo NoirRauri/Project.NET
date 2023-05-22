@@ -90,9 +90,9 @@ namespace InaApi2.Controllers
                 clienteEnt.Cedula = clienteDTO.Cedula;
                 clienteEnt = await _IClienteService.obtenerPorId(clienteEnt);
 
-                if (clienteEnt == null)
+                if (clienteEnt != null)
                 {
-                    return NotFound("Cliente no existe");
+                    return NotFound("Cliente existe");
                 }
 
                 TbTipoCliente tipoCliente = new TbTipoCliente();
@@ -105,7 +105,7 @@ namespace InaApi2.Controllers
                 clienteEnt.CedulaNavigation.Cedula = clienteDTO.Cedula;
                 // validar
                 TbCliente cliente = _mapper.Map<TbCliente>(clienteDTO);
-                cliente = await _IClienteService.guardar(cliente);
+                await _IClienteService.guardar(cliente);
                 return Ok();
             }
             catch (Exception)
@@ -147,7 +147,7 @@ namespace InaApi2.Controllers
                 var resp = _IClienteService.actualizar(clienteEnt);
                 if (resp.Result)// por estar en un task
                 {
-                    return Ok("El Cliente a sido modificado");
+                    return Ok();
                 }
                 else
                 {
@@ -186,7 +186,7 @@ namespace InaApi2.Controllers
                 var resp = _IClienteService.actualizar(clienteEnt);
                 if (resp.Result)// por estar en un task
                 {
-                    return Ok("El Cliente a sido eliminado");
+                    return Ok();
                 }
                 else
                 {

@@ -52,10 +52,10 @@ namespace Data
                 await _context.SaveChangesAsync();
                 return entity;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
-                throw;
+                throw ex;
             }
         }
 

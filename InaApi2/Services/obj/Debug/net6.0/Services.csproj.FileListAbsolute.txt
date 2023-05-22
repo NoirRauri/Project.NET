@@ -83,3 +83,20 @@ C:\Users\CRPP13\Desktop\InaApi2\Services\obj\Debug\net6.0\Services.dll
 C:\Users\CRPP13\Desktop\InaApi2\Services\obj\Debug\net6.0\refint\Services.dll
 C:\Users\CRPP13\Desktop\InaApi2\Services\obj\Debug\net6.0\Services.pdb
 C:\Users\CRPP13\Desktop\InaApi2\Services\obj\Debug\net6.0\ref\Services.dll
+E:\jueves 05-18\InaApi2\Services\bin\Debug\net6.0\Services.deps.json
+E:\jueves 05-18\InaApi2\Services\bin\Debug\net6.0\Services.dll
+E:\jueves 05-18\InaApi2\Services\bin\Debug\net6.0\Services.pdb
+E:\jueves 05-18\InaApi2\Services\bin\Debug\net6.0\Data.dll
+E:\jueves 05-18\InaApi2\Services\bin\Debug\net6.0\Entities.dll
+E:\jueves 05-18\InaApi2\Services\bin\Debug\net6.0\Data.pdb
+E:\jueves 05-18\InaApi2\Services\bin\Debug\net6.0\Entities.pdb
+E:\jueves 05-18\InaApi2\Services\obj\Debug\net6.0\Services.csproj.AssemblyReference.cache
+E:\jueves 05-18\InaApi2\Services\obj\Debug\net6.0\Services.GeneratedMSBuildEditorConfig.editorconfig
+E:\jueves 05-18\InaApi2\Services\obj\Debug\net6.0\Services.AssemblyInfoInputs.cache
+E:\jueves 05-18\InaApi2\Services\obj\Debug\net6.0\Services.AssemblyInfo.cs
+E:\jueves 05-18\InaApi2\Services\obj\Debug\net6.0\Services.csproj.CoreCompileInputs.cache
+E:\jueves 05-18\InaApi2\Services\obj\Debug\net6.0\Services.csproj.CopyComplete
+E:\jueves 05-18\InaApi2\Services\obj\Debug\net6.0\Services.dll
+E:\jueves 05-18\InaApi2\Services\obj\Debug\net6.0\refint\Services.dll
+E:\jueves 05-18\InaApi2\Services\obj\Debug\net6.0\Services.pdb
+E:\jueves 05-18\InaApi2\Services\obj\Debug\net6.0\ref\Services.dll

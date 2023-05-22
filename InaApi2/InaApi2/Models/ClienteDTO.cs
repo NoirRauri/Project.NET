@@ -4,7 +4,6 @@ namespace InaApi2.Models
 {
     public class ClienteDTO
     {
-
         public string? Cedula { get; set; }
 
         public int TipoCliente { get; set; }

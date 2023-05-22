@@ -81,3 +81,20 @@ C:\Users\CRPP13\Desktop\InaApi2\Data\obj\Debug\net6.0\refint\Data.dll
 C:\Users\CRPP13\Desktop\InaApi2\Data\obj\Debug\net6.0\Data.pdb
 C:\Users\CRPP13\Desktop\InaApi2\Data\obj\Debug\net6.0\Data.genruntimeconfig.cache
 C:\Users\CRPP13\Desktop\InaApi2\Data\obj\Debug\net6.0\ref\Data.dll
+E:\jueves 05-18\InaApi2\Data\bin\Debug\net6.0\Data.deps.json
+E:\jueves 05-18\InaApi2\Data\bin\Debug\net6.0\Data.runtimeconfig.json
+E:\jueves 05-18\InaApi2\Data\bin\Debug\net6.0\Data.dll
+E:\jueves 05-18\InaApi2\Data\bin\Debug\net6.0\Data.pdb
+E:\jueves 05-18\InaApi2\Data\bin\Debug\net6.0\Entities.dll
+E:\jueves 05-18\InaApi2\Data\bin\Debug\net6.0\Entities.pdb
+E:\jueves 05-18\InaApi2\Data\obj\Debug\net6.0\Data.csproj.AssemblyReference.cache
+E:\jueves 05-18\InaApi2\Data\obj\Debug\net6.0\Data.GeneratedMSBuildEditorConfig.editorconfig
+E:\jueves 05-18\InaApi2\Data\obj\Debug\net6.0\Data.AssemblyInfoInputs.cache
+E:\jueves 05-18\InaApi2\Data\obj\Debug\net6.0\Data.AssemblyInfo.cs
+E:\jueves 05-18\InaApi2\Data\obj\Debug\net6.0\Data.csproj.CoreCompileInputs.cache
+E:\jueves 05-18\InaApi2\Data\obj\Debug\net6.0\Data.csproj.CopyComplete
+E:\jueves 05-18\InaApi2\Data\obj\Debug\net6.0\Data.dll
+E:\jueves 05-18\InaApi2\Data\obj\Debug\net6.0\refint\Data.dll
+E:\jueves 05-18\InaApi2\Data\obj\Debug\net6.0\Data.pdb
+E:\jueves 05-18\InaApi2\Data\obj\Debug\net6.0\Data.genruntimeconfig.cache
+E:\jueves 05-18\InaApi2\Data\obj\Debug\net6.0\ref\Data.dll
