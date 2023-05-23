@@ -88,10 +88,10 @@ namespace InaApi2.Controllers
                 }
 
                 tipoCliente = _mapper.Map<TbTipoCliente>(tipoClienteDTO);
-                //tipoCliente.Id = tipoClienteDTO.Id;
+                tipoCliente.Id = tipoClienteDTO.Id;
                 // validar
                 tipoCliente = await _TipoClienteService.guardar(tipoCliente);
-                return Ok("Se creo el tipo cliente");
+                return Ok();
             }
             catch (Exception)
             {
@@ -119,13 +119,13 @@ namespace InaApi2.Controllers
                 }
 
                 tipoCliente = _mapper.Map<TbTipoCliente>(tipoClienteDTO);
-                tipoCliente.Id=id;
+                tipoCliente.Id = id;
                 // validar
 
                 var resp = _TipoClienteService.actualizar(tipoCliente);
                 if (resp.Result)// por estar en un task
                 {
-                    return Ok("El tipo cliente a sido modificado");
+                    return Ok();
                 }
                 else
                 {
@@ -163,7 +163,7 @@ namespace InaApi2.Controllers
                 var resp = _TipoClienteService.actualizar(tipoCliente);
                 if (resp.Result)// por estar en un task
                 {
-                    return Ok("El Cliente a sido eliminado");
+                    return Ok();
                 }
                 else
                 {

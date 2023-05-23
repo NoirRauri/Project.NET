@@ -34,8 +34,8 @@
       <form [formGroup]="tiposForms">
         <!-- ComboBox tipo Cliente -->
         <mat-form-field class="formField" appearance="fill">
-          <mat-label>Tipo de Cliente</mat-label>
-          <select matNativeControl formControlName="tipoCliente">
+          <mat-label>Tipo de Venta</mat-label>
+          <select matNativeControl formControlName="tipoventa">
             <option *ngFor="let opcion of tipoVenta" [ngValue]="opcion.id">
               {{ opcion.nombre }}
             </option>

@@ -40,7 +40,7 @@ export class FacturaComponent {
   fecha = new Date();
 
   tiposForms = new FormGroup({
-    tipoCliente: new FormControl('', [Validators.required]),
+    tipoventa: new FormControl('', [Validators.required]),
     tipoPago: new FormControl('', [Validators.required])
   });
 
@@ -168,8 +168,8 @@ export class FacturaComponent {
       estado: true,
       TbDetalleFacturas: this.detalleList
     };
-    // console.log(this.factura)
-    // this.msg.success('Succefull!', 'Prueba de guardado!');
+    console.log(this.factura)
+    this.msg.success('Succefull!', 'Prueba de guardado!');
     this.facturaServ.guardar(this.factura).subscribe(() => {
       console.log("guardo")
       this.msg.success('Succefull!', 'El cliente se guardo correctamente!');

@@ -16,6 +16,7 @@ export class FindProductoComponent {
 
   displayedColumns: string[] = ['IdProducto', 'Nombre', 'Stock', 'Precio', 'acciones'];
   dataSource = new MatTableDataSource();
+  filterValue: string;
 
   constructor(private prodcutoServ: ProductoService, private msg: ToastrService, private dialog: MatDialog) { }
 
@@ -30,5 +31,9 @@ export class FindProductoComponent {
     }, (err) => {
       console.log(err)
     })
+  }
+
+  aplicarFiltro() {
+    this.dataSource.filter = this.filterValue.trim().toLowerCase();
   }
 }

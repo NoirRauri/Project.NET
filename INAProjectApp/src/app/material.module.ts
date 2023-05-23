@@ -35,7 +35,6 @@ const myListMaterialModule = [
     MatPaginatorModule,
     MatFormFieldModule,
     MatInputModule
-    
 ];
 
 
@@ -43,10 +42,10 @@ const myListMaterialModule = [
 
 @NgModule({
 
-  imports: [...myListMaterialModule],
+    imports: [...myListMaterialModule],
 
-  exports: [...myListMaterialModule],
+    exports: [...myListMaterialModule],
 
 })
 
-export class MaterialModule {}
+export class MaterialModule { }

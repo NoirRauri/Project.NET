@@ -42,9 +42,9 @@ export class ClientesComponent {
   openModal(cliente?: Cliente): void {
     let dialogClie;
     if (!cliente) {
-      dialogClie = this.dialog.open(ClientesAdminComponent, { height: '550px', width: '700px' })
+      dialogClie = this.dialog.open(ClientesAdminComponent, { maxHeight: '550px', maxWidth: '700px' })
     } else {
-      dialogClie = this.dialog.open(ClientesAdminComponent, { height: '550px', width: '700px', data: { cliente } })
+      dialogClie = this.dialog.open(ClientesAdminComponent, { maxHeight: '550px', maxWidth: '700px', data: { cliente } })
     }
     dialogClie.afterClosed().subscribe(() => {
       this.cargarlista();

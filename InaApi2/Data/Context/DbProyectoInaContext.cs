@@ -22,9 +22,13 @@ public partial class DbProyectoInaContext : DbContext
 
     public virtual DbSet<TbFactura> TbFacturas { get; set; }
 
+    public virtual DbSet<TbJugador> TbJugadors { get; set; }
+
     public virtual DbSet<TbPersona> TbPersonas { get; set; }
 
     public virtual DbSet<TbProducto> TbProductos { get; set; }
+
+    public virtual DbSet<TbRegistroJuego> TbRegistroJuegos { get; set; }
 
     public virtual DbSet<TbTipoCliente> TbTipoClientes { get; set; }
 
@@ -67,7 +71,7 @@ public partial class DbProyectoInaContext : DbContext
 
         modelBuilder.Entity<TbDetalleFactura>(entity =>
         {
-            entity.HasKey(e => e.IdDetalleFactura).HasName("PK__tbDetall__DFF3825246BD622F");
+            entity.HasKey(e => e.IdDetalleFactura).HasName("PK__tbDetall__DFF382524444E7EB");
 
             entity.ToTable("tbDetalleFacturas");
 
@@ -96,7 +100,7 @@ public partial class DbProyectoInaContext : DbContext
 
         modelBuilder.Entity<TbFactura>(entity =>
         {
-            entity.HasKey(e => e.IdFactura).HasName("PK__tbFactur__3CD5687E35BE6B3A");
+            entity.HasKey(e => e.IdFactura).HasName("PK__tbFactur__3CD5687EF910A24E");
 
             entity.ToTable("tbFacturas");
 
@@ -134,6 +138,22 @@ public partial class DbProyectoInaContext : DbContext
                 .HasConstraintName("fk_tbTipoVenta_tbFacturas");
         });
 
+        modelBuilder.Entity<TbJugador>(entity =>
+        {
+            entity.HasKey(e => e.Cedula);
+
+            entity.ToTable("tbJugador");
+
+            entity.Property(e => e.Cedula)
+                .HasMaxLength(10)
+                .IsFixedLength()
+                .HasColumnName("cedula");
+            entity.Property(e => e.Nombre)
+                .HasMaxLength(10)
+                .IsFixedLength()
+                .HasColumnName("nombre");
+        });
+
         modelBuilder.Entity<TbPersona>(entity =>
         {
             entity.HasKey(e => e.Cedula);
@@ -164,7 +184,7 @@ public partial class DbProyectoInaContext : DbContext
 
         modelBuilder.Entity<TbProducto>(entity =>
         {
-            entity.HasKey(e => e.IdProducto).HasName("PK__tbProduc__07F4A132868DFA67");
+            entity.HasKey(e => e.IdProducto).HasName("PK__tbProduc__07F4A1327D919378");
 
             entity.ToTable("tbProductos");
 
@@ -183,13 +203,28 @@ public partial class DbProyectoInaContext : DbContext
             entity.Property(e => e.Stock).HasColumnName("stock");
         });
 
+        modelBuilder.Entity<TbRegistroJuego>(entity =>
+        {
+            entity.ToTable("tbRegistroJuego");
+
+            entity.Property(e => e.Id).HasColumnName("id");
+            entity.Property(e => e.Cedula)
+                .HasMaxLength(10)
+                .IsFixedLength()
+                .HasColumnName("cedula");
+            entity.Property(e => e.Tiempo).HasColumnName("tiempo");
+
+            entity.HasOne(d => d.CedulaNavigation).WithMany(p => p.TbRegistroJuegos)
+                .HasForeignKey(d => d.Cedula)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_tbRegistroJuego_tbJugador");
+        });
+
         modelBuilder.Entity<TbTipoCliente>(entity =>
         {
             entity.ToTable("tbTipoClientes");
 
-            entity.Property(e => e.Id)
-                .ValueGeneratedNever()
-                .HasColumnName("id");
+            entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.Estado).HasColumnName("estado");
             entity.Property(e => e.Nombre)
                 .HasMaxLength(50)
@@ -199,7 +234,7 @@ public partial class DbProyectoInaContext : DbContext
 
         modelBuilder.Entity<TbTipoPago>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__tbTipoPa__3213E83FB2523D63");
+            entity.HasKey(e => e.Id).HasName("PK__tbTipoPa__3213E83F74236E2E");
 
             entity.ToTable("tbTipoPagos");
 
@@ -216,7 +251,7 @@ public partial class DbProyectoInaContext : DbContext
 
         modelBuilder.Entity<TbTipoVenta>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__tbTipoVe__3213E83F33F4D737");
+            entity.HasKey(e => e.Id).HasName("PK__tbTipoVe__3213E83F9D83B8F3");
 
             entity.ToTable("tbTipoVentas");
 

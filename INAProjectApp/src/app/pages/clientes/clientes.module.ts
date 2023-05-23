@@ -5,7 +5,7 @@ import { ClientesRoutingModule } from './clientes-routing.module';
 import { ClientesComponent } from './clientes.component';
 import { MaterialModule } from 'src/app/material.module';
 import { ClientesAdminComponent } from './clientes-admin/clientes-admin.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FindClientesComponent } from './find-clientes/find-clientes.component';
 
 
@@ -19,7 +19,8 @@ import { FindClientesComponent } from './find-clientes/find-clientes.component';
     CommonModule,
     ClientesRoutingModule,
     MaterialModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ]
 })
 export class ClientesModule { }

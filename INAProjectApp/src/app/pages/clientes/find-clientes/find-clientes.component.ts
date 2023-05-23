@@ -12,6 +12,7 @@ import { ClientesService } from 'src/app/shared/service/clientes.service';
 export class FindClientesComponent {
   displayedColumns: string[] = ['cedula', 'nombre', 'apellido1', 'apellido2', 'acciones'];
   dataSource = new MatTableDataSource();
+  filterValue: string;
 
   constructor(private clienteServ: ClientesService, private msg: ToastrService, private dialog: MatDialog) { }
 
@@ -26,6 +27,10 @@ export class FindClientesComponent {
     }, (err) => {
       console.log(err)
     })
+  }
+
+  aplicarFiltro() {
+    this.dataSource.filter = this.filterValue.trim().toLowerCase();
   }
 
 }

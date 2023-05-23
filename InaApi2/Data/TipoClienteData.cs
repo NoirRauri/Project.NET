@@ -65,7 +65,7 @@ namespace Data
             try
             {
                 return await _context.TbTipoClientes
-                        .Where(x => x.Id == entity.Id && x.Estado == true).SingleOrDefaultAsync();
+                        .Where(x => x.Id == entity.Id && x.Estado == true).AsNoTracking().SingleOrDefaultAsync();
 
             }
             catch (Exception ex)
@@ -79,7 +79,7 @@ namespace Data
         {
             try
             {
-                return await _context.TbTipoClientes.Where(x => x.Estado == true).ToListAsync();
+                return await _context.TbTipoClientes.Where(x => x.Estado == true).AsNoTracking().ToListAsync();
 
             }
             catch (Exception ex)
