@@ -1,0 +1,12 @@
+.agregar{
+    margin: 0px 50px;
+}
+
+body{
+    background-color: black;
+}
+.hearder{
+    position: fixed;
+    max-width: 100%;
+    z-index: 1;
+}
